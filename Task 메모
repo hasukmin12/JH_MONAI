@@ -1,0 +1,8 @@
+wandb login
+
+
+python train.py --target=kipa --model=unetr --input=96,96,96 --channel_in=1 --channel_out=5 --optimizer=AdamW --loss=DiceCE --max_iterations=50000 --eval_num=500 --fold=4 --window=0,2000 --load_model=False
+
+
+python train.py --target=kipa --model=unet --channel_out=5 --optimizer=AdamW --loss=DiceCE --max_iterations=50000 --eval_num=500 --fold=4 --load_model=False
+python train.py --target=kipa --model=unetr --input=96,96,96 --channel_out=5 --optimizer=AdamW --loss=DiceCE --max_iterations=50000 --eval_num=500 --fold=4 --load_model=False
