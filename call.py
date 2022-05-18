@@ -4,6 +4,63 @@ import torchio as tio
 from torch import optim
 from pytorch_model_summary import summary
 
+
+def call_only_model(args):
+    model = None
+    if args.MODEL_NAME in ['unetr', 'UNETR']:
+        from monai.networks.nets import UNETR
+        model = UNETR(
+            in_channels = args.channel_in,
+            out_channels = args.channel_out,
+            img_size = args.input_shape,
+            feature_size = args.patch_size,
+            hidden_size = args.embed_dim,
+            mlp_dim = args.mlp_dim,
+            num_heads = args.num_heads,
+            dropout_rate = args.dropout,
+            pos_embed="perceptron",
+            norm_name="instance",
+            res_block=True,
+        )
+    elif args.MODEL_NAME in ['vnet', 'VNET', 'VNet', 'Vnet']:
+        from monai.networks.nets import VNet
+        model = VNet(
+            spatial_dims=3,
+            in_channels=args.channel_in,
+            out_channels=args.channel_out,
+        )
+    
+    elif args.MODEL_NAME in ['unet', 'UNET', 'UNet', 'Unet']:
+        from monai.networks.nets import UNet
+        model = UNet(
+            spatial_dims=3,
+            in_channels=args.channel_in,
+            out_channels=args.channel_out,
+            channels=(32, 64, 128, 256, 512),
+            strides = (2, 2, 2, 2),
+            dropout = 0.1,
+            num_res_units=2,
+        )
+
+    
+        # summary(model, torch.zeros((1,*args.input_shape)), show_input=True)
+    # elif args.MODEL_NAME in ['swinUNETR', 'sunetr', 'sUNETR']:
+    #     pass
+
+    # optimizer = call_optimizer(args, model)
+    # assert optimizer is not None, 'Optimization Error!'
+    assert model is not None, 'Model Error!'
+    
+    return model.to(args.device) # , optimizer
+
+
+
+
+
+
+
+
+
 def sort_nicely(l):
     """ Sort the given list in the way that humans expect.
     """

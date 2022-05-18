@@ -1,5 +1,5 @@
 [default]
 entity = hutom_miai
-project = has_kipa_unetr
+project = has_kipa_unet_focal_loss
 base_url = https://api.wandb.ai
 

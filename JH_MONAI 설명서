@@ -1,0 +1,28 @@
+
+
+1. 세팅
+pip install monai
+pip install nnunet
+
+
+2. 데이터셋 세팅
+/JH_MONAI/dataset/Task_302_KiPA.py 를 참고해서 데이터셋을 학습에 사용할 수 있게 만들어준다.
+
+3. 학습
+python train.py --target=Task --model=모델 --channel_out=클래스 수 --max_iterations=50000 --eval_num=500 --fold=4 --load_model=학습에 가져올 모델 경로 --save_name=모델이 저장될 경로의 이름
+(예시)
+python train.py --target=kipa --model=unet --channel_out=5 --max_iterations=50000 --eval_num=500 --fold=4 --load_model=False --save_name=unet_focal
+(콘다를 사용하는 경우, python -> /opt/conda/bin/python)
+
+
+4. inference
+python inference.py --data_dir=인퍼런스하려는 데이터셋 폴더 --output_dir=인퍼런스 결과물을 저장할 폴더 --pth_path=사용할 모델 경로 --model=모델 (참고 : --roi_x(랑 y,z)=sliding_window_inference할 때 사용할 패치 사이즈)
+(예시)
+python inference.py --data_dir="/disk1/sukmin/dataset/Task302_KiPA" --output_dir="/disk1/sukmin/inf_rst" --pth_path="/disk1/sukmin/unet/kipa/fold4/model_best.pth" --model=unet --roi_x=96 --roi_y=96 --roi_z=96
+
+
+5. evalutation
+/JH_MONAI/evalutation/inference_rst_2_evaluation_rst.py 를 실행해서 4번에서 나온 output_dir의 결과물을 visualize 및 evalutation 하기 위한 포맷으로 변경 (시간이 좀 걸린다)
+/JH_MONAI/evalutation/eval_test.py 를 실행하면 위에서 나온 결과물 경로(folder_with_pred)에 summary.json 파일이 생성된다.
+summary.json에는 각각의 테스트 케이스마다 dice, prediction, recall 등의 결과가 클래스마다 나오며 가장 아래에는 전체 테스트셋의 평균값이 나온다.
+
