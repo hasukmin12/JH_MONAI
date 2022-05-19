@@ -18,7 +18,7 @@ python train.py --target=kipa --model=unet --channel_out=5 --max_iterations=5000
 4. inference
 python inference.py --data_dir=인퍼런스하려는 데이터셋 폴더 --output_dir=인퍼런스 결과물을 저장할 폴더 --pth_path=사용할 모델 경로 --model=모델 (참고 : --roi_x(랑 y,z)=sliding_window_inference할 때 사용할 패치 사이즈)
 (예시)
-python inference.py --data_dir="/disk1/sukmin/dataset/Task302_KiPA" --output_dir="/disk1/sukmin/inf_rst" --pth_path="/disk1/sukmin/unet/kipa/fold4/model_best.pth" --model=unet --roi_x=96 --roi_y=96 --roi_z=96
+python inference.py --data_dir="/disk1/sukmin/dataset/Task302_KiPA" --output_dir="/disk1/sukmin/inf_rst" --pth_path="/disk1/sukmin/kipa_model/unet_ce/model_best.pth" --model=unet --roi_x=96 --roi_y=96 --roi_z=96
 
 
 5. evalutation

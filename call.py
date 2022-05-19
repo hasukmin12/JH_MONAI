@@ -4,6 +4,8 @@ import torchio as tio
 from torch import optim
 from pytorch_model_summary import summary
 
+from loss_list import DiceCELoss_Portion, DiceFocalLoss_Portion
+
 
 def call_only_model(args):
     model = None
@@ -190,6 +192,18 @@ class call_loss(nn.Module):
             softmax=softmax, 
             to_onehot_y=y_onehot
             )
+        self.DiceCE_Portion = DiceCELoss_Portion(
+            include_background=include_background,
+            sigmoid=sigmoid, 
+            softmax=softmax, 
+            to_onehot_y=y_onehot
+            )
+        self.DiceFocal_Portion = DiceFocalLoss_Portion(
+            include_background=include_background,
+            sigmoid=sigmoid, 
+            softmax=softmax, 
+            to_onehot_y=y_onehot
+        )
 
 
         self.Loss_NAME = loss_mode
@@ -203,6 +217,11 @@ class call_loss(nn.Module):
             return self.DiceCE(pred, target)
         elif self.Loss_NAME in ['DiceFocal', 'dicefocal', 'Dice+Focal', 'dice+focal', 'dice_focal']:
             return self.DiceFocal(pred, target)
+        elif self.Loss_NAME in ['DiceCE_Portion', 'diceceportion', 'Dice+Ce+Portion', 'dice+ce+portion', 'dice_ce_portion']:
+            return self.DiceCE_Portion(pred, target)
+        elif self.Loss_NAME in ['DiceFocal_Portion', 'dicefocalportion', 'Dice+Focal+Portion', 'dice+focal+portion', 'dice_focal_portion']:
+            return self.DiceFocal_Portion(pred, target)
+
  
         
         

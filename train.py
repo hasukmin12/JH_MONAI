@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--fold', '-f', default=4, dest='FOLD', type=int)
     parser.add_argument('--num_folds', default=5, dest='FOLDS', type=int)
     parser.add_argument('--spacing', default='1,1,1', dest='spacing', type=str)
-    parser.add_argument('--save_name', default='unet_focal_loss', type=str)
+    parser.add_argument('--save_name', default='unet_ce', type=str)
 
     parser.add_argument('--a_min', default=0.0, type=float, help='a_min in ScaleIntensityRanged')
     parser.add_argument('--a_max', default=2000.0, type=float, help='a_max in ScaleIntensityRanged')
@@ -61,7 +61,7 @@ def main():
     parser.add_argument('--num_heads', default=12, dest='num_heads', type=int)
     parser.add_argument('--dropout', default=0.1, dest='dropout', type=float)
 
-    parser.add_argument('--loss', default='DiceFocal', dest='Loss_NAME', type=str)
+    parser.add_argument('--loss', default='DiceCE', dest='Loss_NAME', type=str)
     parser.add_argument('--lr', default=0.0005, dest='lr_init', type=float)
     parser.add_argument('--lr_decay', default=1e-5, dest='lr_decay', type=float)
     parser.add_argument('--momentum', default=0.9, dest='momentum', type=float)
@@ -99,7 +99,7 @@ def main():
         print('Wrong target name!')
 
     # args.LOGDIR = f'/disk1/sukmin/{args.MODEL_NAME}/{args.TARGET_NAME}/fold{args.FOLD}'
-    args.LOGDIR = f'/disk1/sukmin/{args.TARGET_NAME}/{args.save_name}'
+    args.LOGDIR = f'/disk1/sukmin/{args.TARGET_NAME}_model/{args.save_name}'
     
     if not os.path.isdir(args.LOGDIR):
         os.makedirs(args.LOGDIR, exist_ok=True)
