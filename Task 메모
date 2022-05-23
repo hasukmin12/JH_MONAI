@@ -5,13 +5,10 @@ wandb login
 
 
 
-/opt/conda/bin/python train.py --loss=DiceCE --save_name="unet_ce"                     # --load_model='/disk1/sukmin/kipa_model/unet_ce/model_best.pth'
-/opt/conda/bin/python train.py --loss=DiceFocal --save_name="unet_focal"                    # --load_model='/disk1/sukmin/kipa_model/unet_focal/model_best.pth'
-/opt/conda/bin/python train.py --loss=DiceCE_Portion --save_name="unet_ce_portion"
-/opt/conda/bin/python train.py --loss=DiceFocal_Portion --save_name="unet_focal_portion"
-
-
-
+CUDA_VISIBLE_DEVICES=0 /opt/conda/bin/python train.py --loss=DiceCE --save_name="unetr_ce"                     # --load_model='/disk1/sukmin/kipa_model/unet_ce/model_best.pth'
+CUDA_VISIBLE_DEVICES=1 /opt/conda/bin/python train.py --loss=DiceFocal --save_name="unetr_focal"                    # --load_model='/disk1/sukmin/kipa_model/unet_focal/model_best.pth'
+CUDA_VISIBLE_DEVICES=2 /opt/conda/bin/python train.py --loss=DiceCE_Portion --save_name="unetr_ce_portion"
+CUDA_VISIBLE_DEVICES=3 /opt/conda/bin/python train.py --loss=DiceFocal_Portion --save_name="unetr_focal_portion"
 
 
 

@@ -20,38 +20,40 @@ from utils import *
 def main():
     parser = ap.ArgumentParser()
 
-    # 사용하고자 하는 GPU 넘버 
-    os.environ['CUDA_VISIBLE_DEVICES'] = '3'
+    # # 사용하고자 하는 GPU 넘버 
+    os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
     ## data3
-    parser.add_argument('--target', '-n', default='kipa', dest='TARGET_NAME', type=str)
-    parser.add_argument('--fold', '-f', default=4, dest='FOLD', type=int)
-    parser.add_argument('--num_folds', default=5, dest='FOLDS', type=int)
-    parser.add_argument('--spacing', default='1,1,1', dest='spacing', type=str)
-    parser.add_argument('--save_name', default='unet_ce', type=str)
-
-    parser.add_argument('--a_min', default=0.0, type=float, help='a_min in ScaleIntensityRanged')
-    parser.add_argument('--a_max', default=2000.0, type=float, help='a_max in ScaleIntensityRanged')
+    parser.add_argument('--target', '-n', default='multi_organ', dest='TARGET_NAME', type=str)
+    parser.add_argument('--save_name', default='unetr_ce', type=str)
+    parser.add_argument('--loss', default='DiceCE', dest='Loss_NAME', type=str)
 
     parser.add_argument('--channel_in', default=1, dest='channel_in', type=int)
-    parser.add_argument('--channel_out', default=5, dest='channel_out', type=int)
+    parser.add_argument('--channel_out', default=6, dest='channel_out', type=int)
 
     ## training
+    parser.add_argument('--optimizer', default='AdamW', dest='Optim_NAME', type=str)
+    parser.add_argument('--model', '-m', default='unetr', dest='MODEL_NAME', type=str)
+    parser.add_argument('--load_model', default='False', dest='load_model', type=str)
     parser.add_argument('--batch_size', default=4, dest='BATCH_SIZE', type=int)    
+
     parser.add_argument('--max_iterations', default=50000, dest='max_iterations', type=int)
     parser.add_argument('--eval_num', default=500, dest='eval_num', type=int)
     parser.add_argument('--samples', default=20, dest='samples_per_volume', type=int)
 
     parser.add_argument('--seeds', default=42, dest='seeds', type=int)
     parser.add_argument('--workers', default=8, dest='num_workers', type=int)
+    parser.add_argument('--fold', '-f', default=4, dest='FOLD', type=int)
+    parser.add_argument('--num_folds', default=5, dest='FOLDS', type=int)
+    parser.add_argument('--spacing', default='1,1,1', dest='spacing', type=str)
 
-    ## transformer
-    parser.add_argument('--optimizer', default='AdamW', dest='Optim_NAME', type=str)
-    parser.add_argument('--model', '-m', default='unet', dest='MODEL_NAME', type=str)
-    parser.add_argument('--load_model', default='False', dest='load_model', type=str)
-    # parser.add_argument('--input', default='108,108,108', dest='input_shape', type=str)
-    parser.add_argument('--input', default='96,96,96', dest='input_shape', type=str)
+    
+    # Roi는 꼭 16의 배수로 해야한다.(DownConv 과정에서 절반씩 줄어드는데 100같은거 해버리면 채널 128될때쯤에 25가되서 13,14로 나뉘어서 에러남)
+    # parser.add_argument('--input', default='96,96,96', dest='input_shape', type=str)
+    parser.add_argument('--input', default='96,96,64', dest='input_shape', type=str)
 
+    # UNETR의 경우 args.patch_size를 꼭 정의해줘야한다.
+    parser.add_argument('--patch', default=32, dest='patch_size', type=int)
 
     # parser.add_argument('--patch', default=32, dest='patch_size', type=int)
     parser.add_argument('--mlp_dim', default=3072, dest='mlp_dim', type=int)
@@ -61,7 +63,8 @@ def main():
     parser.add_argument('--num_heads', default=12, dest='num_heads', type=int)
     parser.add_argument('--dropout', default=0.1, dest='dropout', type=float)
 
-    parser.add_argument('--loss', default='DiceCE', dest='Loss_NAME', type=str)
+    parser.add_argument('--a_min', default=0.0, type=float, help='a_min in ScaleIntensityRanged')
+    parser.add_argument('--a_max', default=2000.0, type=float, help='a_max in ScaleIntensityRanged')
     parser.add_argument('--lr', default=0.0005, dest='lr_init', type=float)
     parser.add_argument('--lr_decay', default=1e-5, dest='lr_decay', type=float)
     parser.add_argument('--momentum', default=0.9, dest='momentum', type=float)
@@ -76,9 +79,10 @@ def main():
     args.ext_layers = [int(this_) for this_ in args.ext_layers.split(',')]
     args.load_model = True if args.load_model in ['true', 'True'] else False
 
-    if args.TARGET_NAME in ['organs', 'Organs', 'organ', 'Oran']:
-        args.TARGET_NAME = 'organ'
-        args.class_names = {1:'Liver', 2:'Stomach', 3:'Pancreas', 4:'Gallbladder', 5:'Spleen'}
+    if args.TARGET_NAME in ['kipa', 'KiPA', 'KIPA']:
+        args.TARGET_NAME = 'kipa'
+        args.root = '/disk1/sukmin/dataset/Task302_KiPA'
+        args.class_names = {1:'Vein', 2:'Kidney', 3:'Artery', 4:'Tumor'}  
     elif args.TARGET_NAME in ['rib', 'Rib', 'RIB']:
         args.TARGET_NAME = 'rib'
         args.root = '/disk1/MIAI/labels_rib'
@@ -91,10 +95,15 @@ def main():
         args.TARGET_NAME = 'awall'
         args.root = '/disk1/MIAI/labels_awall'
         args.class_names = {1: args.TARGET_NAME}
-    elif args.TARGET_NAME in ['kipa', 'KiPA', 'KIPA']:
-        args.TARGET_NAME = 'kipa'
-        args.root = '/disk1/sukmin/dataset/Task302_KiPA'
-        args.class_names = {1:'Vein', 2:'Kidney', 3:'Artery', 4:'Tumor'}        
+    # elif args.TARGET_NAME in ['organs', 'Organs', 'organ', 'Oran']:
+    #     args.TARGET_NAME = 'organ'
+    #     args.class_names = {1:'Liver', 2:'Stomach', 3:'Pancreas', 4:'Gallbladder', 5:'Spleen'} 
+    elif args.TARGET_NAME in ['Multi_Organ', 'multiorgan', 'multi_organ']:
+        args.TARGET_NAME = 'multi_organ'
+        args.root = '/disk1/sukmin/dataset/Task001_Multi_Organ'
+        args.class_names = {1:'Liver', 2:'Stomach', 3:'Pancreas', 4:'Gallbladder', 5:'Spleen'} 
+
+
     else:
         print('Wrong target name!')
 
@@ -134,12 +143,16 @@ def main():
     if args.TARGET_NAME == 'kipa':
         from trans_kipa import call_transforms
         train_transforms, val_transforms = call_transforms(args)
+    elif args.TARGET_NAME == 'multi_organ':
+        from trains_multi_organ import call_transforms
+        train_transforms, val_transforms = call_transforms(args)
+
     # elif args.TARGET_NAME == 'awall':
     #     from trans_awall import train_transforms, val_transforms
     #     train_transforms, val_transforms = call_transforms(args)
-    elif args.TARGET_NAME == 'rib':
-        from trans_rib import train_transforms, val_transforms
-        train_transforms, val_transforms = call_transforms(args)
+    # if args.TARGET_NAME == 'rib':
+    #     from trans_rib import train_transforms, val_transforms
+    #     train_transforms, val_transforms = call_transforms(args)
     
     train_ds = CacheDataset(
         data=train_list,
