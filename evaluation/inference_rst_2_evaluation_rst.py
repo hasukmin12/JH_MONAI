@@ -4,16 +4,14 @@ import nibabel as nib
 import numpy as np
 
 
-path = '/disk1/sukmin/inf_rst/unet'
+path = '/disk1/sukmin/inf_rst/kipa_model/unet_ce'
 inf_list = next(os.walk(path))[1]
 inf_list.sort()
 print(inf_list)
 
-aim_path = '/disk1/sukmin/eval_rst/kipa_unet'
+aim_path = '/disk1/sukmin/eval_rst/kipa_model/unet_ce'
 if os.path.isdir(aim_path)==False:
     os.makedirs(aim_path)
-
-
 
 for case in inf_list:
     print(case)
