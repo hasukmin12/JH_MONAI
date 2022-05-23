@@ -21,18 +21,18 @@ from utils import *
 
 def main():
     parser = ap.ArgumentParser()
-    parser.add_argument('--data_dir', '-i', default="/disk1/sukmin/dataset/Task302_KiPA", type=str)
-    parser.add_argument('--output_dir', '-o', default="/disk1/sukmin/inf_rst/kipa_model", type=str)
-    parser.add_argument('--model_path', default="/disk1/sukmin/kipa_model", type=str)
-    parser.add_argument('--model', '-m', default='unetr', dest='MODEL_NAME', type=str)
-    parser.add_argument('--save_name', default='unetr_ce', type=str)
+    parser.add_argument('--data_dir', '-i', default="/disk1/sukmin/dataset/Task001_Multi_Organ", type=str)
+    parser.add_argument('--output_dir', '-o', default="/disk1/sukmin/inf_rst/multi_organ_model", type=str)
+    parser.add_argument('--model_path', default="/disk1/sukmin/multi_organ_model", type=str)
+    parser.add_argument('--model', '-m', default='unet', dest='MODEL_NAME', type=str)
+    parser.add_argument('--save_name', default='unet_focal', type=str)
 
     # default
     parser.add_argument('--roi_x', default=96, type=int, help='roi size in x direction')
     parser.add_argument('--roi_y', default=96, type=int, help='roi size in y direction')
-    parser.add_argument('--roi_z', default=96, type=int, help='roi size in z direction')
+    parser.add_argument('--roi_z', default=64, type=int, help='roi size in z direction')
     parser.add_argument('--channel_in', default=1, dest='channel_in', type=int)
-    parser.add_argument('--channel_out', default=5, dest='channel_out', type=int)
+    parser.add_argument('--channel_out', default=6, dest='channel_out', type=int)
 
     parser.add_argument('--dropout', default=0.0, dest='dropout', type=float)
     parser.add_argument('--optimizer', default='AdamW', dest='Optim_NAME', type=str)
@@ -46,7 +46,7 @@ def main():
     parser.add_argument('--mlp_dim', default=3072, dest='mlp_dim', type=int)
     parser.add_argument('--num_layers', default=12, dest='num_layers', type=int)
     parser.add_argument('--ext_layers', default='3,6,9,12', dest='ext_layers', type=str)
-    parser.add_argument('--input', default='96,96,96', dest='input_shape', type=str)
+    parser.add_argument('--input', default='96,96,64', dest='input_shape', type=str)
 
     parser.add_argument('--patch', default=32, dest='patch_size', type=int)
     parser.add_argument('--num_heads', default=12, dest='num_heads', type=int)

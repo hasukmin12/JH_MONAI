@@ -3,12 +3,14 @@ from evaluator import evaluate_folder
 
 
 # 비교하려는 GT 폴더 결과
-folder_with_gt = '/disk1/sukmin/dataset/Task302_KiPA/labelsTs'
+# folder_with_gt = '/disk1/sukmin/dataset/Task302_KiPA/labelsTs'
+folder_with_gt = '/disk1/sukmin/dataset/Task001_Multi_Organ/labelsTs'
 
 # inference 된 결과
-folder_with_pred = '/disk1/sukmin/eval_rst/kipa_unet'
+# folder_with_pred = '/disk1/sukmin/eval_rst/kipa_model/unet_ce'
+folder_with_pred = '/disk1/sukmin/eval_rst/multi_organ_model/unet_ce'
 
-labels = (0, 1, 2, 3, 4) # test 하고 싶은 라벨 입력
+labels = (0, 1, 2, 3, 4, 5) # test 하고 싶은 라벨 입력
 
 evaluate_folder(folder_with_gt, folder_with_pred, labels)
 

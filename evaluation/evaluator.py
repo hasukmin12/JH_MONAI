@@ -47,14 +47,18 @@ class Evaluator:
         "True Negative Rate",
         "False Discovery Rate",
         "Total Positives Test",
-        "Total Positives Reference"
+        "Total Positives Reference",
+        "Hausdorff Distance",
+        "Hausdorff Distance 95",
+        "Avg. Surface Distance",
+        "Avg. Symmetric Surface Distance"
     ]
 
     default_advanced_metrics = [
-        #"Hausdorff Distance",
-        "Hausdorff Distance 95",
-        #"Avg. Surface Distance",
-        #"Avg. Symmetric Surface Distance"
+        # "Hausdorff Distance",
+        # "Hausdorff Distance 95",
+        # "Avg. Surface Distance",
+        # "Avg. Symmetric Surface Distance"
     ]
 
     def __init__(self,
