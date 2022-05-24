@@ -21,7 +21,7 @@ def main():
     parser = ap.ArgumentParser()
 
     # # 사용하고자 하는 GPU 넘버 
-    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
 
     ## data3
     parser.add_argument('--target', '-n', default='multi_organ', dest='TARGET_NAME', type=str)
@@ -50,7 +50,7 @@ def main():
     
     # Roi는 꼭 16의 배수로 해야한다.(DownConv 과정에서 절반씩 줄어드는데 100같은거 해버리면 채널 128될때쯤에 25가되서 13,14로 나뉘어서 에러남)
     # parser.add_argument('--input', default='96,96,96', dest='input_shape', type=str)
-    parser.add_argument('--input', default='192,192,96', dest='input_shape', type=str)
+    parser.add_argument('--input', default='160,160,64', dest='input_shape', type=str)
 
     # UNETR의 경우 args.patch_size를 꼭 정의해줘야한다.
     # parser.add_argument('--patch', default=32, dest='patch_size', type=int)
@@ -183,7 +183,14 @@ def main():
 
     # Initialize model, optimizer and loss function
     model, optimizer = call_model(args)
-    # model = nn.DataParallel(model)
+    model = nn.DataParallel(model)
+
+
+
+    net = nn.DataParallel(netG, device_ids=list(range(NGPU)))
+
+    model.to(device)
+
 
     print(model)
     
