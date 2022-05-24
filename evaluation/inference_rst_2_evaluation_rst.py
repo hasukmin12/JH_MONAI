@@ -4,12 +4,12 @@ import nibabel as nib
 import numpy as np
 
 
-path = '/disk1/sukmin/inf_rst/multi_organ_model/unet_focal'
+path = '/disk1/sukmin/inf_rst/multi_organ_model/unet_ce_3'
 inf_list = next(os.walk(path))[1]
 inf_list.sort()
 print(inf_list)
 
-aim_path = '/disk1/sukmin/eval_rst/multi_organ_model/unet_focal'
+aim_path = '/disk1/sukmin/eval_rst/multi_organ_model/unet_ce_3'
 if os.path.isdir(aim_path)==False:
     os.makedirs(aim_path)
 

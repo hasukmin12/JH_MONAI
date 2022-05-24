@@ -9,6 +9,16 @@ def call_transforms(args):
                 a_min=args.a_min, a_max=args.a_max, 
                 b_min=0, b_max=1, clip=True),
             CropForegroundd(keys=["image", "label"], source_key="image"),
+
+            # Add Spacing
+            Spacingd(
+                keys=["image", "label"],
+                pixdim=(1.0, 1.0, 1.0),
+                mode = ("bilinear", "nearest")
+            ),
+            NormalizeIntensityd(keys ="image", nonzero=True, channel_wise=True),
+
+
             RandFlipd(
                 keys=["image", "label"],
                 spatial_axis=[0],
@@ -67,6 +77,14 @@ def call_transforms(args):
                 a_min=args.a_min, a_max=args.a_max, 
                 # a_min=args.CONTRAST[0], a_max=args.CONTRAST[1], 
                 b_min=0, b_max=1, clip=True),
+            # Add Spacing
+            Spacingd(
+                keys=["image", "label"],
+                pixdim=(1.0, 1.0, 1.0),
+                mode = ("bilinear", "nearest")
+            ),
+            NormalizeIntensityd(keys ="image", nonzero=True, channel_wise=True),
+            
             CropForegroundd(keys=["image", "label"], source_key="image"),
             ToTensord(keys=["image", "label"]),
         ]

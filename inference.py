@@ -23,9 +23,9 @@ def main():
     parser = ap.ArgumentParser()
     parser.add_argument('--data_dir', '-i', default="/disk1/sukmin/dataset/Task001_Multi_Organ", type=str)
     parser.add_argument('--output_dir', '-o', default="/disk1/sukmin/inf_rst/multi_organ_model", type=str)
-    parser.add_argument('--model_path', default="/disk1/sukmin/multi_organ_model", type=str)
+    parser.add_argument('--pth_path', default="/disk1/sukmin/multi_organ_model/unet_ce/model_best.pth", type=str)
     parser.add_argument('--model', '-m', default='unet', dest='MODEL_NAME', type=str)
-    parser.add_argument('--save_name', default='unet_focal', type=str)
+    parser.add_argument('--save_name', default='unet_ce_2', type=str)
 
     # default
     parser.add_argument('--roi_x', default=96, type=int, help='roi size in x direction')
@@ -34,7 +34,6 @@ def main():
     parser.add_argument('--channel_in', default=1, dest='channel_in', type=int)
     parser.add_argument('--channel_out', default=6, dest='channel_out', type=int)
 
-    parser.add_argument('--dropout', default=0.0, dest='dropout', type=float)
     parser.add_argument('--optimizer', default='AdamW', dest='Optim_NAME', type=str)
     parser.add_argument('--lr', default=0.0005, dest='lr_init', type=float)
     parser.add_argument('--lr_decay', default=1e-5, dest='lr_decay', type=float)
@@ -47,6 +46,7 @@ def main():
     parser.add_argument('--num_layers', default=12, dest='num_layers', type=int)
     parser.add_argument('--ext_layers', default='3,6,9,12', dest='ext_layers', type=str)
     parser.add_argument('--input', default='96,96,64', dest='input_shape', type=str)
+    parser.add_argument('--spacing', default='1,1,1', dest='spacing', type=str)
 
     parser.add_argument('--patch', default=32, dest='patch_size', type=int)
     parser.add_argument('--num_heads', default=12, dest='num_heads', type=int)
@@ -55,7 +55,7 @@ def main():
 
     os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 
-    args.pth_path = os.path.join(args.model_path, args.save_name, 'model_best.pth')
+    # args.pth_path = os.path.join(args.model_path, args.save_name, 'model_best.pth')
 
     print(args.pth_path)
     print(args.save_name)
@@ -80,13 +80,38 @@ def main():
 
     test_org_transforms = Compose(
         [
-            LoadImaged(keys="image"),
-            EnsureChannelFirstd(keys="image"),
+            # KiPA
+
+            # LoadImaged(keys="image"),
+            # EnsureChannelFirstd(keys="image"),
+            # ScaleIntensityRanged(keys=["image"], 
+            #     a_min=args.a_min, a_max=args.a_max, 
+            #     b_min=0, b_max=1, clip=True),
+            # CropForegroundd(keys=["image"], source_key="image"),
+            # EnsureTyped(keys="image"),
+
+
+
+
+            # Multi_Organ
+
+            LoadImaged(keys=["image", "label"]),
+            EnsureChannelFirstd(keys=["image", "label"]),
+            AsDiscreted(keys=["label"], to_onehot=args.channel_out),
             ScaleIntensityRanged(keys=["image"], 
                 a_min=args.a_min, a_max=args.a_max, 
+                # a_min=args.CONTRAST[0], a_max=args.CONTRAST[1], 
                 b_min=0, b_max=1, clip=True),
-            CropForegroundd(keys=["image"], source_key="image"),
-            EnsureTyped(keys="image"),
+            # Add Spacing
+            Spacingd(
+                keys=["image", "label"],
+                pixdim=(1.0, 1.0, 1.0),
+                mode = ("bilinear", "nearest")
+            ),
+            NormalizeIntensityd(keys ="image", nonzero=True, channel_wise=True),
+            
+            CropForegroundd(keys=["image", "label"], source_key="image"),
+            ToTensord(keys=["image", "label"]),
         ]
     )
 

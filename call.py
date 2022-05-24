@@ -152,6 +152,38 @@ def call_model(args):
     elif args.MODEL_NAME in ['swinUNETR', 'sunetr', 'sUNETR']:
         pass
 
+
+    elif args.MODEL_NAME in ['dynunet', 'DynUNet', 'dyn_unet']:
+        from monai.networks.nets.dynunet import DynUNet
+        model = DynUNet(
+
+            spatial_dims=3,
+            in_channels = args.channel_in,
+            out_channels = args.channel_out,
+            kernel_size = (3,3,3),
+            strides= (2,2,2,2),
+            upsample_kernel_size=(2,2,2),
+    
+            norm_name="instance",
+            deep_supervision=True,
+            deep_supr_num= 4
+
+            # spatial_dims=3,
+            # in_channels=args.channel_in,
+            # out_channels=args.channel_out,
+            # kernel_size= (3, 3, 3),
+            # # channels=(32, 64, 128, 256, 512),
+            # strides = (2, 2, 2, 2),
+            # upsample_kernel_size=strides[1:],
+            # dropout = 0.1,
+            # norm_name="instance",
+            # deep_supervision=True,
+            # deep_supr_num=deep_supr_num[task_id],
+            # num_res_units=2,
+        )
+
+
+
     optimizer = call_optimizer(args, model)
     assert optimizer is not None, 'Optimization Error!'
     assert model is not None, 'Model Error!'

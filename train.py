@@ -21,19 +21,19 @@ def main():
     parser = ap.ArgumentParser()
 
     # # 사용하고자 하는 GPU 넘버 
-    os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
     ## data3
     parser.add_argument('--target', '-n', default='multi_organ', dest='TARGET_NAME', type=str)
-    parser.add_argument('--save_name', default='unetr_ce', type=str)
-    parser.add_argument('--loss', default='DiceCE', dest='Loss_NAME', type=str)
+    parser.add_argument('--save_name', default='unet_focal_patch_up', type=str)
+    parser.add_argument('--loss', default='DiceFocal', dest='Loss_NAME', type=str)
 
     parser.add_argument('--channel_in', default=1, dest='channel_in', type=int)
     parser.add_argument('--channel_out', default=6, dest='channel_out', type=int)
 
     ## training
     parser.add_argument('--optimizer', default='AdamW', dest='Optim_NAME', type=str)
-    parser.add_argument('--model', '-m', default='unetr', dest='MODEL_NAME', type=str)
+    parser.add_argument('--model', '-m', default='unet', dest='MODEL_NAME', type=str)
     parser.add_argument('--load_model', default='False', dest='load_model', type=str)
     parser.add_argument('--batch_size', default=4, dest='BATCH_SIZE', type=int)    
 
@@ -45,17 +45,17 @@ def main():
     parser.add_argument('--workers', default=8, dest='num_workers', type=int)
     parser.add_argument('--fold', '-f', default=4, dest='FOLD', type=int)
     parser.add_argument('--num_folds', default=5, dest='FOLDS', type=int)
-    parser.add_argument('--spacing', default='1,1,1', dest='spacing', type=str)
+    # parser.add_argument('--spacing', default='1,1,1', dest='spacing', type=str)
 
     
     # Roi는 꼭 16의 배수로 해야한다.(DownConv 과정에서 절반씩 줄어드는데 100같은거 해버리면 채널 128될때쯤에 25가되서 13,14로 나뉘어서 에러남)
     # parser.add_argument('--input', default='96,96,96', dest='input_shape', type=str)
-    parser.add_argument('--input', default='96,96,64', dest='input_shape', type=str)
+    parser.add_argument('--input', default='192,192,96', dest='input_shape', type=str)
 
     # UNETR의 경우 args.patch_size를 꼭 정의해줘야한다.
-    parser.add_argument('--patch', default=32, dest='patch_size', type=int)
-
     # parser.add_argument('--patch', default=32, dest='patch_size', type=int)
+
+    parser.add_argument('--patch', default=32, dest='patch_size', type=int)
     parser.add_argument('--mlp_dim', default=3072, dest='mlp_dim', type=int)
     parser.add_argument('--num_layers', default=12, dest='num_layers', type=int)
     parser.add_argument('--ext_layers', default='3,6,9,12', dest='ext_layers', type=str)
@@ -63,8 +63,14 @@ def main():
     parser.add_argument('--num_heads', default=12, dest='num_heads', type=int)
     parser.add_argument('--dropout', default=0.1, dest='dropout', type=float)
 
-    parser.add_argument('--a_min', default=0.0, type=float, help='a_min in ScaleIntensityRanged')
-    parser.add_argument('--a_max', default=2000.0, type=float, help='a_max in ScaleIntensityRanged')
+    # # kipa -> (0,2000)
+    # parser.add_argument('--a_min', default=0.0, type=float, help='a_min in ScaleIntensityRanged')
+    # parser.add_argument('--a_max', default=2000.0, type=float, help='a_max in ScaleIntensityRanged')
+
+    # multi_organ -> (-150, 300)
+    parser.add_argument('--a_min', default=-150.0, type=float, help='a_min in ScaleIntensityRanged')
+    parser.add_argument('--a_max', default=300.0, type=float, help='a_max in ScaleIntensityRanged')
+
     parser.add_argument('--lr', default=0.0005, dest='lr_init', type=float)
     parser.add_argument('--lr_decay', default=1e-5, dest='lr_decay', type=float)
     parser.add_argument('--momentum', default=0.9, dest='momentum', type=float)
@@ -73,7 +79,7 @@ def main():
 
     assert args.FOLDS+1 > args.FOLD, 'Check total # of folds and target fold'
 
-    args.spacing = [float(this_) for this_ in args.spacing.split(',')]
+    # args.spacing = [float(this_) for this_ in args.spacing.split(',')]
     # args.CONTRAST = [int(this_) for this_ in args.CONTRAST.split(',')]
     args.input_shape = [int(this_) for this_ in args.input_shape.split(',')]
     args.ext_layers = [int(this_) for this_ in args.ext_layers.split(',')]

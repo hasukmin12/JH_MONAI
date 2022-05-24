@@ -8,7 +8,7 @@ folder_with_gt = '/disk1/sukmin/dataset/Task001_Multi_Organ/labelsTs'
 
 # inference 된 결과
 # folder_with_pred = '/disk1/sukmin/eval_rst/kipa_model/unet_ce'
-folder_with_pred = '/disk1/sukmin/eval_rst/multi_organ_model/unet_ce'
+folder_with_pred = '/disk1/sukmin/eval_rst/multi_organ_model/unet_ce_3'
 
 labels = (0, 1, 2, 3, 4, 5) # test 하고 싶은 라벨 입력
 
