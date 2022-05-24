@@ -1,0 +1,157 @@
+2022-05-24 09:44:19,174 INFO    MainThread:7868 [internal.py:wandb_internal():90] W&B internal server running at pid: 7868, started at: 2022-05-24 09:44:19.173787
+2022-05-24 09:44:19,179 INFO    WriterThread:7868 [datastore.py:open_for_write():75] open: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/run-14q53f63.wandb
+2022-05-24 09:44:19,181 DEBUG   SenderThread:7868 [sender.py:send():232] send: header
+2022-05-24 09:44:19,181 DEBUG   SenderThread:7868 [sender.py:send():232] send: run
+2022-05-24 09:44:19,450 INFO    SenderThread:7868 [dir_watcher.py:__init__():197] watching files in: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files
+2022-05-24 09:44:19,450 INFO    SenderThread:7868 [sender.py:_start_run_threads():811] run started: 14q53f63 with start time 1653385457
+2022-05-24 09:44:19,450 DEBUG   SenderThread:7868 [sender.py:send():232] send: summary
+2022-05-24 09:44:19,450 INFO    SenderThread:7868 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:44:19,451 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: check_version
+2022-05-24 09:44:19,451 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: check_version
+2022-05-24 09:44:19,533 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: run_start
+2022-05-24 09:44:19,564 DEBUG   HandlerThread:7868 [meta.py:__init__():35] meta init
+2022-05-24 09:44:19,564 DEBUG   HandlerThread:7868 [meta.py:__init__():49] meta init done
+2022-05-24 09:44:19,564 DEBUG   HandlerThread:7868 [meta.py:probe():209] probe
+2022-05-24 09:44:19,602 DEBUG   HandlerThread:7868 [meta.py:_setup_git():199] setup git
+2022-05-24 09:44:19,618 DEBUG   HandlerThread:7868 [meta.py:_setup_git():206] setup git done
+2022-05-24 09:44:19,618 DEBUG   HandlerThread:7868 [meta.py:_save_pip():53] save pip
+2022-05-24 09:44:19,619 DEBUG   HandlerThread:7868 [meta.py:_save_pip():67] save pip done
+2022-05-24 09:44:19,619 DEBUG   HandlerThread:7868 [meta.py:_save_conda():74] save conda
+2022-05-24 09:44:20,453 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/wandb-summary.json
+2022-05-24 09:44:20,453 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/requirements.txt
+2022-05-24 09:44:20,453 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/conda-environment.yaml
+2022-05-24 09:44:20,488 DEBUG   HandlerThread:7868 [meta.py:_save_conda():84] save conda done
+2022-05-24 09:44:20,488 DEBUG   HandlerThread:7868 [meta.py:probe():247] probe done
+2022-05-24 09:44:20,599 DEBUG   SenderThread:7868 [sender.py:send():232] send: files
+2022-05-24 09:44:20,600 INFO    SenderThread:7868 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-05-24 09:44:20,609 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:44:20,610 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:44:20,841 DEBUG   SenderThread:7868 [sender.py:send():232] send: telemetry
+2022-05-24 09:44:20,842 DEBUG   SenderThread:7868 [sender.py:send():232] send: config
+2022-05-24 09:44:20,856 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: log_artifact
+2022-05-24 09:44:20,856 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: log_artifact
+2022-05-24 09:44:21,297 INFO    Thread-11 :7868 [upload_job.py:push():132] Uploaded file /tmp/tmpojm4sjrowandb/56qbp2ve-wandb-metadata.json
+2022-05-24 09:44:21,451 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/wandb-metadata.json
+2022-05-24 09:44:21,452 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:44:21,557 INFO    SenderThread:7868 [sender.py:send_request_log_artifact():1005] logged artifact dataset - {'id': 'QXJ0aWZhY3Q6MTMyODcwNTQ0', 'digest': '64e7c61456b10382e2f3b571ac24b659', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'dataset', 'alias': 'latest'}, {'artifactCollectionName': 'dataset', 'alias': 'v7'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIwNjg4MDMx', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTMyODcwNTQ0', 'versionIndex': 7}}, 'version': 'v7'}
+2022-05-24 09:44:23,452 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:44:35,845 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:44:35,846 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:44:39,465 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:44:41,466 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:44:45,468 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:44:51,195 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:44:51,198 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:44:51,205 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:44:51,471 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/config.yaml
+2022-05-24 09:44:51,471 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:44:53,472 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:44:55,473 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:04,476 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:06,477 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:06,499 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:45:06,500 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:45:08,480 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:10,478 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:12,479 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:14,480 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:16,482 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:18,482 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:20,483 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:21,783 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:45:21,783 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:45:22,484 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:24,485 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:24,756 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:45:26,486 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:28,487 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:37,186 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:45:37,187 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:45:40,491 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:49,495 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:51,496 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:52,411 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:45:52,412 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:45:53,497 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:57,499 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:45:58,502 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:46:03,501 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:07,812 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:46:07,812 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:46:11,505 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:21,509 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:23,274 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:46:23,275 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:46:28,511 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:31,539 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:46:32,513 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:34,514 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:38,516 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:38,575 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:46:38,575 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:46:40,516 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:48,519 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:50,520 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:46:53,952 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:46:53,952 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:46:55,522 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:47:05,084 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:47:09,436 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:47:09,436 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:47:19,535 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:47:21,537 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:47:24,799 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:47:24,800 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:47:31,541 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:47:37,293 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:47:40,133 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:47:40,133 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:47:42,545 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:47:44,546 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:47:52,549 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:47:55,763 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:47:55,764 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:47:58,552 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:48:02,554 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:48:04,555 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:48:05,800 DEBUG   SenderThread:7868 [sender.py:send():232] send: telemetry
+2022-05-24 09:48:07,557 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:48:08,557 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:48:10,077 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:48:10,988 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:48:10,989 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:48:24,565 INFO    Thread-7  :7868 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/config.yaml
+2022-05-24 09:48:26,218 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:48:26,218 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:48:41,447 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:48:41,447 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:48:43,047 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:48:56,665 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:48:56,666 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:49:11,893 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:49:11,894 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:49:15,584 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:49:27,113 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:49:27,114 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:49:42,337 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:49:42,338 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:49:48,211 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:49:57,562 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:49:57,563 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:50:12,801 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:50:12,801 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:50:20,504 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:50:28,037 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:50:28,038 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:50:43,277 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:50:43,277 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:50:52,411 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:50:58,498 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:50:58,499 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:51:13,728 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:51:13,728 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:51:24,974 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:51:29,012 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:51:29,013 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:51:44,236 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:51:44,236 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status

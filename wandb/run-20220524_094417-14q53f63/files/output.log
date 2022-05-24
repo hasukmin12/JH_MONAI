@@ -1,0 +1,258 @@
+
+Train 75 Valid 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loading dataset: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 75/75 [02:33<00:00,  2.04s/it]
+
+
+
+
+
+
+
+
+
+Loading dataset: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:07<00:00,  2.71s/it]
+UNet(
+  (model): Sequential(
+    (0): ResidualUnit(
+      (conv): Sequential(
+        (unit0): Convolution(
+          (conv): Conv3d(1, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+          (adn): ADN(
+            (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+            (D): Dropout(p=0.1, inplace=False)
+            (A): PReLU(num_parameters=1)
+          )
+        )
+        (unit1): Convolution(
+          (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (adn): ADN(
+            (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+            (D): Dropout(p=0.1, inplace=False)
+            (A): PReLU(num_parameters=1)
+          )
+        )
+      )
+      (residual): Conv3d(1, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+    )
+    (1): SkipConnection(
+      (submodule): Sequential(
+        (0): ResidualUnit(
+          (conv): Sequential(
+            (unit0): Convolution(
+              (conv): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+              (adn): ADN(
+                (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                (D): Dropout(p=0.1, inplace=False)
+                (A): PReLU(num_parameters=1)
+              )
+            )
+            (unit1): Convolution(
+              (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+              (adn): ADN(
+                (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                (D): Dropout(p=0.1, inplace=False)
+                (A): PReLU(num_parameters=1)
+              )
+            )
+          )
+          (residual): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+        )
+        (1): SkipConnection(
+          (submodule): Sequential(
+            (0): ResidualUnit(
+              (conv): Sequential(
+                (unit0): Convolution(
+                  (conv): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                  (adn): ADN(
+                    (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                    (D): Dropout(p=0.1, inplace=False)
+                    (A): PReLU(num_parameters=1)
+                  )
+                )
+                (unit1): Convolution(
+                  (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                  (adn): ADN(
+                    (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                    (D): Dropout(p=0.1, inplace=False)
+                    (A): PReLU(num_parameters=1)
+                  )
+                )
+              )
+              (residual): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+            )
+            (1): SkipConnection(
+              (submodule): Sequential(
+                (0): ResidualUnit(
+                  (conv): Sequential(
+                    (unit0): Convolution(
+                      (conv): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                      (adn): ADN(
+                        (N): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                        (D): Dropout(p=0.1, inplace=False)
+                        (A): PReLU(num_parameters=1)
+                      )
+                    )
+                    (unit1): Convolution(
+                      (conv): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                      (adn): ADN(
+                        (N): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                        (D): Dropout(p=0.1, inplace=False)
+                        (A): PReLU(num_parameters=1)
+                      )
+                    )
+                  )
+                  (residual): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                )
+                (1): SkipConnection(
+                  (submodule): ResidualUnit(
+                    (conv): Sequential(
+                      (unit0): Convolution(
+                        (conv): Conv3d(256, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                      (unit1): Convolution(
+                        (conv): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                    )
+                    (residual): Conv3d(256, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+                  )
+                )
+                (2): Sequential(
+                  (0): Convolution(
+                    (conv): ConvTranspose3d(768, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+                    (adn): ADN(
+                      (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                      (D): Dropout(p=0.1, inplace=False)
+                      (A): PReLU(num_parameters=1)
+                    )
+                  )
+                  (1): ResidualUnit(
+                    (conv): Sequential(
+                      (unit0): Convolution(
+                        (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                    )
+                    (residual): Identity()
+                  )
+                )
+              )
+            )
+            (2): Sequential(
+              (0): Convolution(
+                (conv): ConvTranspose3d(256, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+                (adn): ADN(
+                  (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                  (D): Dropout(p=0.1, inplace=False)
+                  (A): PReLU(num_parameters=1)
+                )
+              )
+              (1): ResidualUnit(
+                (conv): Sequential(
+                  (unit0): Convolution(
+                    (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                    (adn): ADN(
+                      (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                      (D): Dropout(p=0.1, inplace=False)
+                      (A): PReLU(num_parameters=1)
+                    )
+                  )
+                )
+                (residual): Identity()
+              )
+            )
+          )
+        )
+        (2): Sequential(
+          (0): Convolution(
+            (conv): ConvTranspose3d(128, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+            (adn): ADN(
+              (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+              (D): Dropout(p=0.1, inplace=False)
+              (A): PReLU(num_parameters=1)
+            )
+          )
+          (1): ResidualUnit(
+            (conv): Sequential(
+              (unit0): Convolution(
+                (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                (adn): ADN(
+                  (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                  (D): Dropout(p=0.1, inplace=False)
+                  (A): PReLU(num_parameters=1)
+                )
+              )
+            )
+            (residual): Identity()
+          )
+        )
+      )
+    )
+    (2): Sequential(
+      (0): Convolution(
+        (conv): ConvTranspose3d(64, 6, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+        (adn): ADN(
+          (N): InstanceNorm3d(6, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+          (D): Dropout(p=0.1, inplace=False)
+          (A): PReLU(num_parameters=1)
+        )
+      )
+      (1): ResidualUnit(
+        (conv): Sequential(
+          (unit0): Convolution(
+            (conv): Conv3d(6, 6, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          )
+        )
+        (residual): Identity()
+      )
+    )
+  )
+)
+image shape: torch.Size([1, 505, 504, 146]), label shape: torch.Size([6, 505, 504, 146])

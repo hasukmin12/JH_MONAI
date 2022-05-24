@@ -1,0 +1,195 @@
+2022-05-24 07:36:37,362 INFO    MainThread:1013 [internal.py:wandb_internal():90] W&B internal server running at pid: 1013, started at: 2022-05-24 07:36:37.362093
+2022-05-24 07:36:37,364 INFO    WriterThread:1013 [datastore.py:open_for_write():75] open: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/run-1pkwxwyt.wandb
+2022-05-24 07:36:37,365 DEBUG   SenderThread:1013 [sender.py:send():232] send: header
+2022-05-24 07:36:37,365 DEBUG   SenderThread:1013 [sender.py:send():232] send: run
+2022-05-24 07:36:37,645 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: check_version
+2022-05-24 07:36:37,646 INFO    SenderThread:1013 [dir_watcher.py:__init__():197] watching files in: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files
+2022-05-24 07:36:37,646 INFO    SenderThread:1013 [sender.py:_start_run_threads():811] run started: 1pkwxwyt with start time 1653377796
+2022-05-24 07:36:37,646 DEBUG   SenderThread:1013 [sender.py:send():232] send: summary
+2022-05-24 07:36:37,647 INFO    SenderThread:1013 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 07:36:37,647 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: check_version
+2022-05-24 07:36:37,710 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: run_start
+2022-05-24 07:36:37,722 DEBUG   HandlerThread:1013 [meta.py:__init__():35] meta init
+2022-05-24 07:36:37,722 DEBUG   HandlerThread:1013 [meta.py:__init__():49] meta init done
+2022-05-24 07:36:37,722 DEBUG   HandlerThread:1013 [meta.py:probe():209] probe
+2022-05-24 07:36:37,729 DEBUG   HandlerThread:1013 [meta.py:_setup_git():199] setup git
+2022-05-24 07:36:37,742 DEBUG   HandlerThread:1013 [meta.py:_setup_git():206] setup git done
+2022-05-24 07:36:37,742 DEBUG   HandlerThread:1013 [meta.py:_save_pip():53] save pip
+2022-05-24 07:36:37,743 DEBUG   HandlerThread:1013 [meta.py:_save_pip():67] save pip done
+2022-05-24 07:36:37,743 DEBUG   HandlerThread:1013 [meta.py:_save_conda():74] save conda
+2022-05-24 07:36:38,450 DEBUG   HandlerThread:1013 [meta.py:_save_conda():84] save conda done
+2022-05-24 07:36:38,450 DEBUG   HandlerThread:1013 [meta.py:probe():247] probe done
+2022-05-24 07:36:38,557 DEBUG   SenderThread:1013 [sender.py:send():232] send: files
+2022-05-24 07:36:38,557 INFO    SenderThread:1013 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-05-24 07:36:38,563 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:36:38,564 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:36:38,648 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/wandb-summary.json
+2022-05-24 07:36:38,648 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/conda-environment.yaml
+2022-05-24 07:36:38,648 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:36:38,648 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/requirements.txt
+2022-05-24 07:36:38,648 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/wandb-metadata.json
+2022-05-24 07:36:38,791 DEBUG   SenderThread:1013 [sender.py:send():232] send: telemetry
+2022-05-24 07:36:38,791 DEBUG   SenderThread:1013 [sender.py:send():232] send: config
+2022-05-24 07:36:39,319 INFO    Thread-11 :1013 [upload_job.py:push():132] Uploaded file /tmp/tmpgf__t33owandb/33pa1lbh-wandb-metadata.json
+2022-05-24 07:36:40,151 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: log_artifact
+2022-05-24 07:36:40,152 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: log_artifact
+2022-05-24 07:36:40,648 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:36:42,261 INFO    SenderThread:1013 [sender.py:send_request_log_artifact():1005] logged artifact dataset - {'id': 'QXJ0aWZhY3Q6MTMyODcwNTQ0', 'digest': '64e7c61456b10382e2f3b571ac24b659', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIwNjg4MDMx', 'latestArtifact': None}, 'version': 'latest'}
+2022-05-24 07:36:42,649 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:36:53,844 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:36:53,845 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:37:08,687 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/config.yaml
+2022-05-24 07:37:09,089 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:37:09,096 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:37:10,349 DEBUG   SenderThread:1013 [sender.py:send():232] send: stats
+2022-05-24 07:37:24,427 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:37:24,428 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:37:39,654 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:37:39,654 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:37:43,765 DEBUG   SenderThread:1013 [sender.py:send():232] send: stats
+2022-05-24 07:37:55,250 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:37:55,251 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:38:10,518 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:38:10,519 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:38:16,939 DEBUG   SenderThread:1013 [sender.py:send():232] send: stats
+2022-05-24 07:38:25,742 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:38:25,743 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:38:40,965 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:38:40,966 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:38:50,058 DEBUG   SenderThread:1013 [sender.py:send():232] send: stats
+2022-05-24 07:38:57,975 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:38:57,975 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:39:10,759 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:39:13,255 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:39:13,256 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:39:18,769 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:39:24,387 DEBUG   SenderThread:1013 [sender.py:send():232] send: stats
+2022-05-24 07:39:28,740 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:39:28,741 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:39:38,780 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:39:45,299 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 07:39:45,299 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 07:39:53,090 WARNING MainThread:1013 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-05-24 07:39:56,760 DEBUG   SenderThread:1013 [sender.py:send():232] send: telemetry
+2022-05-24 07:39:58,093 DEBUG   SenderThread:1013 [sender.py:send():232] send: stats
+2022-05-24 07:39:58,790 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:39:59,257 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:39:59,258 DEBUG   SenderThread:1013 [sender.py:send():232] send: exit
+2022-05-24 07:39:59,258 INFO    SenderThread:1013 [sender.py:send_exit():368] handling exit code: 255
+2022-05-24 07:39:59,258 INFO    SenderThread:1013 [sender.py:send_exit():370] handling runtime: 201
+2022-05-24 07:39:59,258 INFO    SenderThread:1013 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 07:39:59,258 INFO    SenderThread:1013 [sender.py:send_exit():376] send defer
+2022-05-24 07:39:59,259 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:39:59,259 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,259 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 0
+2022-05-24 07:39:59,260 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,260 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 0
+2022-05-24 07:39:59,260 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 1
+2022-05-24 07:39:59,260 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,260 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 1
+2022-05-24 07:39:59,416 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:39:59,417 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,417 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 1
+2022-05-24 07:39:59,417 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 2
+2022-05-24 07:39:59,417 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:39:59,418 DEBUG   SenderThread:1013 [sender.py:send():232] send: stats
+2022-05-24 07:39:59,419 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,419 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 2
+2022-05-24 07:39:59,419 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,419 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 2
+2022-05-24 07:39:59,420 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 3
+2022-05-24 07:39:59,420 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,420 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 3
+2022-05-24 07:39:59,420 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,420 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 3
+2022-05-24 07:39:59,420 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 4
+2022-05-24 07:39:59,421 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,421 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 4
+2022-05-24 07:39:59,421 DEBUG   SenderThread:1013 [sender.py:send():232] send: summary
+2022-05-24 07:39:59,422 INFO    SenderThread:1013 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 07:39:59,422 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,422 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 4
+2022-05-24 07:39:59,422 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 5
+2022-05-24 07:39:59,422 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,422 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 5
+2022-05-24 07:39:59,423 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,423 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 5
+2022-05-24 07:39:59,520 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:39:59,699 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 6
+2022-05-24 07:39:59,700 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:39:59,700 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,700 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 6
+2022-05-24 07:39:59,701 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,701 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 6
+2022-05-24 07:39:59,701 INFO    SenderThread:1013 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-05-24 07:39:59,791 INFO    Thread-7  :1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/config.yaml
+2022-05-24 07:39:59,791 INFO    SenderThread:1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/wandb-summary.json
+2022-05-24 07:39:59,792 INFO    SenderThread:1013 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:39:59,792 INFO    SenderThread:1013 [dir_watcher.py:finish():342] scan: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files
+2022-05-24 07:39:59,792 INFO    SenderThread:1013 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/wandb-metadata.json wandb-metadata.json
+2022-05-24 07:39:59,792 INFO    SenderThread:1013 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/config.yaml config.yaml
+2022-05-24 07:39:59,792 INFO    SenderThread:1013 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/requirements.txt requirements.txt
+2022-05-24 07:39:59,798 INFO    SenderThread:1013 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/wandb-summary.json wandb-summary.json
+2022-05-24 07:39:59,804 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:39:59,805 INFO    SenderThread:1013 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/conda-environment.yaml conda-environment.yaml
+2022-05-24 07:39:59,810 INFO    SenderThread:1013 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log output.log
+2022-05-24 07:39:59,812 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 7
+2022-05-24 07:39:59,812 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:39:59,813 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:39:59,818 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 7
+2022-05-24 07:39:59,819 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:39:59,819 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 7
+2022-05-24 07:39:59,819 INFO    SenderThread:1013 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-24 07:39:59,915 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:39:59,915 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,017 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,017 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,120 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,120 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,222 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,223 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,325 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,325 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,428 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,428 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,509 INFO    Thread-15 :1013 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/wandb-summary.json
+2022-05-24 07:40:00,530 INFO    Thread-14 :1013 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/requirements.txt
+2022-05-24 07:40:00,531 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,531 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,537 INFO    Thread-13 :1013 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/config.yaml
+2022-05-24 07:40:00,618 INFO    Thread-16 :1013 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/files/output.log
+2022-05-24 07:40:00,633 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,636 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,738 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:00,738 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:00,819 INFO    Thread-6  :1013 [sender.py:transition_state():389] send defer: 8
+2022-05-24 07:40:00,820 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:40:00,820 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 8
+2022-05-24 07:40:00,821 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:40:00,821 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 8
+2022-05-24 07:40:00,840 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:01,436 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 9
+2022-05-24 07:40:01,436 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:01,437 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:40:01,437 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 9
+2022-05-24 07:40:01,437 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:40:01,437 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 9
+2022-05-24 07:40:01,438 INFO    SenderThread:1013 [sender.py:transition_state():389] send defer: 10
+2022-05-24 07:40:01,438 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 07:40:01,438 DEBUG   SenderThread:1013 [sender.py:send():232] send: final
+2022-05-24 07:40:01,438 INFO    HandlerThread:1013 [handler.py:handle_request_defer():164] handle defer: 10
+2022-05-24 07:40:01,439 DEBUG   SenderThread:1013 [sender.py:send():232] send: footer
+2022-05-24 07:40:01,439 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: defer
+2022-05-24 07:40:01,439 INFO    SenderThread:1013 [sender.py:send_request_defer():385] handle sender defer: 10
+2022-05-24 07:40:01,539 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 07:40:01,539 DEBUG   SenderThread:1013 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 07:40:01,539 INFO    SenderThread:1013 [file_pusher.py:join():150] waiting for file pusher
+2022-05-24 07:40:01,864 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: sampled_history
+2022-05-24 07:40:01,865 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: get_summary
+2022-05-24 07:40:01,866 DEBUG   HandlerThread:1013 [handler.py:handle_request():141] handle_request: shutdown
+2022-05-24 07:40:01,866 INFO    HandlerThread:1013 [handler.py:finish():806] shutting down handler
+2022-05-24 07:40:02,439 INFO    WriterThread:1013 [datastore.py:close():279] close: /home/sukmin/JH_MONAI/wandb/run-20220524_073636-1pkwxwyt/run-1pkwxwyt.wandb
+2022-05-24 07:40:02,762 INFO    SenderThread:1013 [sender.py:finish():1110] shutting down sender
+2022-05-24 07:40:02,762 INFO    SenderThread:1013 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-24 07:40:02,762 INFO    SenderThread:1013 [file_pusher.py:join():150] waiting for file pusher
+2022-05-24 07:40:02,763 INFO    MainThread:1013 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,28 @@
+
+Train 75 Valid 25
+Loading dataset:   0%|                                                                                                                | 0/75 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/multiprocessing/pool.py", line 851, in next
+    item = self._items.popleft()
+IndexError: pop from an empty deque
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "train.py", line 358, in <module>
+    main()
+  File "train.py", line 167, in main
+    train_ds = CacheDataset(
+  File "/opt/monai/monai/data/dataset.py", line 723, in __init__
+    self.set_data(data)
+  File "/opt/monai/monai/data/dataset.py", line 748, in set_data
+    self._cache = _compute_cache()
+  File "/opt/monai/monai/data/dataset.py", line 737, in _compute_cache
+    return self._fill_cache()
+  File "/opt/monai/monai/data/dataset.py", line 757, in _fill_cache
+    return list(
+  File "/opt/conda/lib/python3.8/site-packages/tqdm/std.py", line 1180, in __iter__
+    for obj in iterable:
+  File "/opt/conda/lib/python3.8/multiprocessing/pool.py", line 856, in next
+    self._cond.wait(timeout)
+  File "/opt/conda/lib/python3.8/threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt

@@ -1,0 +1,751 @@
+2022-05-24 09:00:48,718 INFO    MainThread:3640 [internal.py:wandb_internal():90] W&B internal server running at pid: 3640, started at: 2022-05-24 09:00:48.718306
+2022-05-24 09:00:48,720 INFO    WriterThread:3640 [datastore.py:open_for_write():75] open: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/run-2je2h8vz.wandb
+2022-05-24 09:00:48,721 DEBUG   SenderThread:3640 [sender.py:send():232] send: header
+2022-05-24 09:00:48,722 DEBUG   SenderThread:3640 [sender.py:send():232] send: run
+2022-05-24 09:00:48,984 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: check_version
+2022-05-24 09:00:48,986 INFO    SenderThread:3640 [dir_watcher.py:__init__():197] watching files in: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files
+2022-05-24 09:00:48,986 INFO    SenderThread:3640 [sender.py:_start_run_threads():811] run started: 2je2h8vz with start time 1653382847
+2022-05-24 09:00:48,986 DEBUG   SenderThread:3640 [sender.py:send():232] send: summary
+2022-05-24 09:00:48,986 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:00:48,986 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: check_version
+2022-05-24 09:00:49,048 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: run_start
+2022-05-24 09:00:49,059 DEBUG   HandlerThread:3640 [meta.py:__init__():35] meta init
+2022-05-24 09:00:49,059 DEBUG   HandlerThread:3640 [meta.py:__init__():49] meta init done
+2022-05-24 09:00:49,059 DEBUG   HandlerThread:3640 [meta.py:probe():209] probe
+2022-05-24 09:00:49,068 DEBUG   HandlerThread:3640 [meta.py:_setup_git():199] setup git
+2022-05-24 09:00:49,082 DEBUG   HandlerThread:3640 [meta.py:_setup_git():206] setup git done
+2022-05-24 09:00:49,082 DEBUG   HandlerThread:3640 [meta.py:_save_pip():53] save pip
+2022-05-24 09:00:49,083 DEBUG   HandlerThread:3640 [meta.py:_save_pip():67] save pip done
+2022-05-24 09:00:49,083 DEBUG   HandlerThread:3640 [meta.py:_save_conda():74] save conda
+2022-05-24 09:00:49,713 DEBUG   HandlerThread:3640 [meta.py:_save_conda():84] save conda done
+2022-05-24 09:00:49,713 DEBUG   HandlerThread:3640 [meta.py:probe():247] probe done
+2022-05-24 09:00:49,813 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:00:49,813 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-05-24 09:00:49,819 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:00:49,820 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:00:49,987 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/wandb-metadata.json
+2022-05-24 09:00:49,988 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/requirements.txt
+2022-05-24 09:00:49,988 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/conda-environment.yaml
+2022-05-24 09:00:49,988 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/wandb-summary.json
+2022-05-24 09:00:49,988 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:00:50,061 DEBUG   SenderThread:3640 [sender.py:send():232] send: telemetry
+2022-05-24 09:00:50,061 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:00:50,106 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: log_artifact
+2022-05-24 09:00:50,107 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: log_artifact
+2022-05-24 09:00:50,556 INFO    Thread-11 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/8t7tle0t-wandb-metadata.json
+2022-05-24 09:00:51,987 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:00:54,048 INFO    SenderThread:3640 [sender.py:send_request_log_artifact():1005] logged artifact dataset - {'id': 'QXJ0aWZhY3Q6MTMyODcwNTQ0', 'digest': '64e7c61456b10382e2f3b571ac24b659', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'dataset', 'alias': 'latest'}, {'artifactCollectionName': 'dataset', 'alias': 'v7'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIwNjg4MDMx', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTMyODcwNTQ0', 'versionIndex': 7}}, 'version': 'v7'}
+2022-05-24 09:01:05,074 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:01:05,075 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:01:05,993 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:07,994 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:14,998 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:16,999 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:19,100 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:01:20,000 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/config.yaml
+2022-05-24 09:01:20,303 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:01:20,303 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:01:21,001 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:23,002 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:29,005 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:31,006 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:33,007 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:35,008 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:35,552 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:01:35,552 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:01:37,009 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:39,020 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:41,018 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:45,021 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:47,022 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:50,806 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:01:50,806 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:01:58,029 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:01:58,191 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:02:02,030 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:06,032 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:10,034 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:11,031 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:02:11,031 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:02:12,036 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:16,039 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:18,041 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:20,042 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:24,043 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:24,886 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:02:26,044 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:26,468 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:02:26,469 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:02:30,046 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:36,048 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:38,049 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:40,050 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:42,102 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:02:42,103 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:02:43,051 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:45,052 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:55,056 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:57,058 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:02:57,342 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:02:57,466 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:02:58,058 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:03:01,063 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:03,064 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:09,066 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:11,067 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:13,069 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:13,588 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:03:13,589 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:03:15,070 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:19,072 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:21,072 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:23,429 DEBUG   SenderThread:3640 [sender.py:send():232] send: telemetry
+2022-05-24 09:03:26,075 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:28,075 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:03:28,998 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:03:28,998 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:03:29,411 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:03:45,833 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:03:45,833 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:03:54,087 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/config.yaml
+2022-05-24 09:04:00,862 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:04:01,053 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:04:01,053 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:04:16,284 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:04:16,284 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:04:19,097 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:04:31,875 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:04:31,876 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:04:33,913 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:04:42,108 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:04:44,109 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:04:46,110 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:04:47,104 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:04:47,105 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:04:50,111 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:04:54,113 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:04:56,114 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:00,115 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:02,329 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:05:02,330 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:05:04,117 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:06,118 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:07,186 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:05:10,120 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:14,121 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:16,122 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:17,689 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:05:17,689 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:05:18,123 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:20,124 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:22,125 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:24,126 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:26,127 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:28,128 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:30,128 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:32,129 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:32,917 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:05:32,917 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:05:34,130 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:36,131 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:38,132 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:39,947 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:05:40,133 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:42,133 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:46,135 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:48,165 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:05:48,165 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:05:50,136 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:52,137 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:05:56,139 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:01,141 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:03,141 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:03,408 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:06:03,408 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:06:07,143 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:09,144 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:12,791 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:06:13,145 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:15,146 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:18,655 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:06:18,655 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:06:19,148 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:21,149 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:23,150 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:25,151 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:29,152 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:31,153 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:33,876 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:06:33,877 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:06:35,155 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:39,156 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:41,157 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:45,159 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:45,875 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:06:49,104 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:06:49,104 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:06:49,160 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:51,161 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:55,163 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:06:57,164 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:04,334 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:07:04,335 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:07:13,024 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,024 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_4450cc14b9099d7dabde.png with policy now
+2022-05-24 09:07:13,026 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,026 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,027 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,027 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,027 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_76805ebdc296e8497126.mask.png with policy now
+2022-05-24 09:07:13,035 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,036 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,036 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_213e500d2c30e27ea17f.png with policy now
+2022-05-24 09:07:13,036 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,036 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,037 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,037 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,037 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_150afa6ae9a95e4a6000.mask.png with policy now
+2022-05-24 09:07:13,045 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,045 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,045 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_66cc53fb5afc80c01725.png with policy now
+2022-05-24 09:07:13,046 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,053 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,054 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,055 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,055 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_9cda00311f6b06cc3303.mask.png with policy now
+2022-05-24 09:07:13,062 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,063 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,063 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_14073d2209384de803be.png with policy now
+2022-05-24 09:07:13,064 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,064 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,065 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,065 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,065 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_f7000463a39059229885.mask.png with policy now
+2022-05-24 09:07:13,066 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,067 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,067 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_1726f37db43b8ae4c64e.png with policy now
+2022-05-24 09:07:13,075 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,075 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,076 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,077 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,077 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_74b136140bc57a9adce9.mask.png with policy now
+2022-05-24 09:07:13,083 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,084 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,085 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_66257117451a54268b7b.png with policy now
+2022-05-24 09:07:13,089 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,093 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,093 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,093 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,093 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_b7913503dab763365165.mask.png with policy now
+2022-05-24 09:07:13,094 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,094 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,095 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_b9f63029a319ac91b36d.png with policy now
+2022-05-24 09:07:13,102 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,102 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,103 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,103 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,103 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_c4eb29e309e3cb53d3a9.mask.png with policy now
+2022-05-24 09:07:13,113 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,113 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,113 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_2a3245f4b51d334dc110.png with policy now
+2022-05-24 09:07:13,115 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,115 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,115 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,115 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,115 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_64997cb408d0674d7f47.mask.png with policy now
+2022-05-24 09:07:13,125 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,126 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,126 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_7648fa281385b79a1dcf.png with policy now
+2022-05-24 09:07:13,134 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,134 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,135 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,135 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,136 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_a2878888414ab3e5d649.mask.png with policy now
+2022-05-24 09:07:13,146 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,147 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,147 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_451e1a157ea99a7f65fb.png with policy now
+2022-05-24 09:07:13,155 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,156 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,156 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,156 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,156 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_0c6bb22ed8f88eebad86.mask.png with policy now
+2022-05-24 09:07:13,158 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,159 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,159 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_27e2f88bd3bbdeeaad6e.png with policy now
+2022-05-24 09:07:13,166 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,166 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,172 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,173 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,173 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_27fd7457665004b55a54.mask.png with policy now
+2022-05-24 09:07:13,177 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,179 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,179 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_b88621fd6b016ef352d8.png with policy now
+2022-05-24 09:07:13,180 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,180 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,181 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,181 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,182 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_f2fb79a19a9f5763179b.mask.png with policy now
+2022-05-24 09:07:13,184 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,186 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,186 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_1726f37db43b8ae4c64e.png
+2022-05-24 09:07:13,186 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_02c7c00dffe81d574c06.png with policy now
+2022-05-24 09:07:13,187 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_34e16b6e4d5afe6cb916.png
+2022-05-24 09:07:13,203 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_9cda00311f6b06cc3303.mask.png
+2022-05-24 09:07:13,203 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_e93293498327fc70ae46.mask.png
+2022-05-24 09:07:13,205 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,205 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,205 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_7648fa281385b79a1dcf.png
+2022-05-24 09:07:13,206 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_b88621fd6b016ef352d8.png
+2022-05-24 09:07:13,206 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,206 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_c7397411efafde6403c3.png
+2022-05-24 09:07:13,207 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,208 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_20eee2b972b72255f48b.mask.png with policy now
+2022-05-24 09:07:13,216 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f7000463a39059229885.mask.png
+2022-05-24 09:07:13,216 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_2a3245f4b51d334dc110.png
+2022-05-24 09:07:13,216 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_b7913503dab763365165.mask.png
+2022-05-24 09:07:13,217 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,222 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_02c7c00dffe81d574c06.png
+2022-05-24 09:07:13,223 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,224 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_bef816050e4e80e450d3.mask.png
+2022-05-24 09:07:13,224 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_068fb101d5578accc596.png with policy now
+2022-05-24 09:07:13,228 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_4450cc14b9099d7dabde.png
+2022-05-24 09:07:13,228 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_27fd7457665004b55a54.mask.png
+2022-05-24 09:07:13,228 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_74b136140bc57a9adce9.mask.png
+2022-05-24 09:07:13,229 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_a2878888414ab3e5d649.mask.png
+2022-05-24 09:07:13,229 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_fadc91178b3bfe4ae123.mask.png
+2022-05-24 09:07:13,229 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,235 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,236 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,236 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,236 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_c3810cbf31b72c88a2bb.mask.png with policy now
+2022-05-24 09:07:13,237 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_068fb101d5578accc596.png
+2022-05-24 09:07:13,237 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f2fb79a19a9f5763179b.mask.png
+2022-05-24 09:07:13,238 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:13,238 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_5a0371f0636167c8ccfa.mask.png
+2022-05-24 09:07:13,246 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,246 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,247 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_0f91ea8bfe1c8face003.png with policy now
+2022-05-24 09:07:13,248 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_150afa6ae9a95e4a6000.mask.png
+2022-05-24 09:07:13,248 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_66cc53fb5afc80c01725.png
+2022-05-24 09:07:13,248 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_b99235543e68401f1e25.mask.png
+2022-05-24 09:07:13,259 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f88c827962bb08215c57.mask.png
+2022-05-24 09:07:13,259 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,259 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,260 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,260 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,260 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_bef816050e4e80e450d3.mask.png with policy now
+2022-05-24 09:07:13,261 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_53feb4f2371d7f724b53.mask.png
+2022-05-24 09:07:13,264 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,265 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,265 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_ebfd0e549232a4d6b15b.png with policy now
+2022-05-24 09:07:13,266 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,266 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,266 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,266 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,266 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_f88c827962bb08215c57.mask.png with policy now
+2022-05-24 09:07:13,267 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,268 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,268 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_051ff3e879d94ff56746.png with policy now
+2022-05-24 09:07:13,269 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,269 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,269 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,269 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,269 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_33d604e977322185ffb4.mask.png with policy now
+2022-05-24 09:07:13,270 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_051ff3e879d94ff56746.png
+2022-05-24 09:07:13,271 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_dc468acd78b41063c34b.mask.png
+2022-05-24 09:07:13,272 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_64997cb408d0674d7f47.mask.png
+2022-05-24 09:07:13,272 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_c3810cbf31b72c88a2bb.mask.png
+2022-05-24 09:07:13,272 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,273 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_33d604e977322185ffb4.mask.png
+2022-05-24 09:07:13,273 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,273 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_fb67dd838cd5cbd126f0.png with policy now
+2022-05-24 09:07:13,274 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_76805ebdc296e8497126.mask.png
+2022-05-24 09:07:13,274 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_213e500d2c30e27ea17f.png
+2022-05-24 09:07:13,275 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_613d007398eba4896697.mask.png
+2022-05-24 09:07:13,277 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_20eee2b972b72255f48b.mask.png
+2022-05-24 09:07:13,277 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_0f91ea8bfe1c8face003.png
+2022-05-24 09:07:13,277 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_fb67dd838cd5cbd126f0.png
+2022-05-24 09:07:13,278 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_ebfd0e549232a4d6b15b.png
+2022-05-24 09:07:13,279 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_60dcbe7d29b268265ca1.mask.png
+2022-05-24 09:07:13,280 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,280 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png with policy now
+2022-05-24 09:07:13,280 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,281 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,281 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_fadc91178b3bfe4ae123.mask.png with policy now
+2022-05-24 09:07:13,282 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_66257117451a54268b7b.png
+2022-05-24 09:07:13,282 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_0554e21a87c0194a76a8.mask.png
+2022-05-24 09:07:13,284 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,284 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,284 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_34e16b6e4d5afe6cb916.png with policy now
+2022-05-24 09:07:13,285 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_63e67afa20542966c166.png
+2022-05-24 09:07:13,287 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f575593d23127a87a2a1.mask.png
+2022-05-24 09:07:13,288 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,289 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_c4eb29e309e3cb53d3a9.mask.png
+2022-05-24 09:07:13,289 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_53feb4f2371d7f724b53.mask.png with policy now
+2022-05-24 09:07:13,289 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_14073d2209384de803be.png
+2022-05-24 09:07:13,289 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_b9f63029a319ac91b36d.png
+2022-05-24 09:07:13,290 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_52195939b517112c79bc.mask.png
+2022-05-24 09:07:13,293 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,293 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_27e2f88bd3bbdeeaad6e.png
+2022-05-24 09:07:13,293 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,293 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_47f24874616cd052f579.png
+2022-05-24 09:07:13,294 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_b99235543e68401f1e25.mask.png with policy now
+2022-05-24 09:07:13,296 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_451e1a157ea99a7f65fb.png
+2022-05-24 09:07:13,296 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_0c6bb22ed8f88eebad86.mask.png
+2022-05-24 09:07:13,297 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_ec3232a3b26e7f76cc93.png
+2022-05-24 09:07:13,297 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,298 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,298 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_ec3232a3b26e7f76cc93.png with policy now
+2022-05-24 09:07:13,300 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images
+2022-05-24 09:07:13,300 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media
+2022-05-24 09:07:13,300 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask
+2022-05-24 09:07:13,301 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,301 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_f575593d23127a87a2a1.mask.png with policy now
+2022-05-24 09:07:13,302 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,302 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,302 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_52195939b517112c79bc.mask.png with policy now
+2022-05-24 09:07:13,310 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,310 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,310 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_c7397411efafde6403c3.png with policy now
+2022-05-24 09:07:13,322 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,322 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_0554e21a87c0194a76a8.mask.png with policy now
+2022-05-24 09:07:13,343 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-24 09:07:13,346 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-24 09:07:13,348 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-24 09:07:13,349 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: partial_history
+2022-05-24 09:07:13,359 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,359 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,362 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_60dcbe7d29b268265ca1.mask.png with policy now
+2022-05-24 09:07:13,412 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,413 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,413 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_47f24874616cd052f579.png with policy now
+2022-05-24 09:07:13,456 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,457 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_dc468acd78b41063c34b.mask.png with policy now
+2022-05-24 09:07:13,470 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,471 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,478 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_e93293498327fc70ae46.mask.png with policy now
+2022-05-24 09:07:13,517 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,518 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,520 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_63e67afa20542966c166.png with policy now
+2022-05-24 09:07:13,551 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,551 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_5a0371f0636167c8ccfa.mask.png with policy now
+2022-05-24 09:07:13,562 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,563 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,563 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_613d007398eba4896697.mask.png with policy now
+2022-05-24 09:07:13,586 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,586 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,586 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_f9c78ad278abb0a204f8.png with policy now
+2022-05-24 09:07:13,596 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,596 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_2ab3fd02b9e755014030.mask.png with policy now
+2022-05-24 09:07:13,613 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,613 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,614 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_6986dba15ca843f2c1f1.mask.png with policy now
+2022-05-24 09:07:13,635 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,635 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,635 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/valid_image_0_395e5538b1fb80367e78.png with policy now
+2022-05-24 09:07:13,637 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,637 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_1d6caf7237e2611a5c00.mask.png with policy now
+2022-05-24 09:07:13,672 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,672 DEBUG   SenderThread:3640 [sender.py:send():232] send: files
+2022-05-24 09:07:13,672 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file media/images/mask/valid_image_0_e981cda0d8a69d1be583.mask.png with policy now
+2022-05-24 09:07:13,691 DEBUG   SenderThread:3640 [sender.py:send():232] send: config
+2022-05-24 09:07:13,692 DEBUG   SenderThread:3640 [sender.py:send():232] send: history
+2022-05-24 09:07:13,698 DEBUG   SenderThread:3640 [sender.py:send():232] send: summary
+2022-05-24 09:07:13,701 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:07:13,702 DEBUG   SenderThread:3640 [sender.py:send():232] send: history
+2022-05-24 09:07:13,704 DEBUG   SenderThread:3640 [sender.py:send():232] send: summary
+2022-05-24 09:07:13,706 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:07:13,706 DEBUG   SenderThread:3640 [sender.py:send():232] send: history
+2022-05-24 09:07:13,707 DEBUG   SenderThread:3640 [sender.py:send():232] send: summary
+2022-05-24 09:07:13,708 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:07:13,713 DEBUG   SenderThread:3640 [sender.py:send():232] send: history
+2022-05-24 09:07:13,715 DEBUG   SenderThread:3640 [sender.py:send():232] send: summary
+2022-05-24 09:07:13,716 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:07:13,909 INFO    Thread-13 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2uiqe3gl-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:13,957 INFO    Thread-12 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1d1wxr72-media/images/valid_image_0_4450cc14b9099d7dabde.png
+2022-05-24 09:07:13,998 INFO    Thread-18 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1bc47z6d-media/images/mask/valid_image_0_9cda00311f6b06cc3303.mask.png
+2022-05-24 09:07:14,030 INFO    Thread-15 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/c9um43tk-media/images/valid_image_0_213e500d2c30e27ea17f.png
+2022-05-24 09:07:14,033 INFO    Thread-26 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/ngbw8789-media/images/mask/valid_image_0_c4eb29e309e3cb53d3a9.mask.png
+2022-05-24 09:07:14,038 INFO    Thread-14 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3qwhnmds-media/images/mask/valid_image_0_76805ebdc296e8497126.mask.png
+2022-05-24 09:07:14,071 INFO    Thread-24 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3bzs95a4-media/images/mask/valid_image_0_b7913503dab763365165.mask.png
+2022-05-24 09:07:14,076 INFO    Thread-22 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2n0fs5w2-media/images/mask/valid_image_0_74b136140bc57a9adce9.mask.png
+2022-05-24 09:07:14,112 INFO    Thread-30 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/ba4waqxt-media/images/mask/valid_image_0_a2878888414ab3e5d649.mask.png
+2022-05-24 09:07:14,126 INFO    Thread-28 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/18z5rfi4-media/images/mask/valid_image_0_64997cb408d0674d7f47.mask.png
+2022-05-24 09:07:14,134 INFO    Thread-32 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1jweexrk-media/images/mask/valid_image_0_0c6bb22ed8f88eebad86.mask.png
+2022-05-24 09:07:14,176 INFO    Thread-19 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1rp9lj3p-media/images/valid_image_0_14073d2209384de803be.png
+2022-05-24 09:07:14,186 INFO    Thread-34 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1wocubbh-media/images/mask/valid_image_0_27fd7457665004b55a54.mask.png
+2022-05-24 09:07:14,188 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/wandb-summary.json
+2022-05-24 09:07:14,188 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_1d6caf7237e2611a5c00.mask.png
+2022-05-24 09:07:14,188 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_6986dba15ca843f2c1f1.mask.png
+2022-05-24 09:07:14,188 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_395e5538b1fb80367e78.png
+2022-05-24 09:07:14,188 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_e981cda0d8a69d1be583.mask.png
+2022-05-24 09:07:14,189 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_f9c78ad278abb0a204f8.png
+2022-05-24 09:07:14,189 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_created():244] file/dir created: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_2ab3fd02b9e755014030.mask.png
+2022-05-24 09:07:14,189 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask
+2022-05-24 09:07:14,189 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images
+2022-05-24 09:07:14,215 INFO    Thread-17 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/25y8ikvk-media/images/valid_image_0_66cc53fb5afc80c01725.png
+2022-05-24 09:07:14,234 INFO    Thread-20 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/27zxt935-media/images/mask/valid_image_0_f7000463a39059229885.mask.png
+2022-05-24 09:07:14,254 INFO    Thread-16 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/pkdcye3j-media/images/mask/valid_image_0_150afa6ae9a95e4a6000.mask.png
+2022-05-24 09:07:14,268 INFO    Thread-21 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2ob5jfmf-media/images/valid_image_0_1726f37db43b8ae4c64e.png
+2022-05-24 09:07:14,276 INFO    Thread-25 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/mdul84ch-media/images/valid_image_0_b9f63029a319ac91b36d.png
+2022-05-24 09:07:14,285 INFO    Thread-27 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2o99o05s-media/images/valid_image_0_2a3245f4b51d334dc110.png
+2022-05-24 09:07:14,302 INFO    Thread-23 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1rpmc0e5-media/images/valid_image_0_66257117451a54268b7b.png
+2022-05-24 09:07:14,324 INFO    Thread-31 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3eqt4duw-media/images/valid_image_0_451e1a157ea99a7f65fb.png
+2022-05-24 09:07:14,330 INFO    Thread-38 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1c8khhk2-media/images/mask/valid_image_0_20eee2b972b72255f48b.mask.png
+2022-05-24 09:07:14,348 INFO    Thread-29 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2pshek3h-media/images/valid_image_0_7648fa281385b79a1dcf.png
+2022-05-24 09:07:14,383 INFO    Thread-33 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3elw7reo-media/images/valid_image_0_27e2f88bd3bbdeeaad6e.png
+2022-05-24 09:07:14,388 INFO    Thread-50 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2o0lv4v7-media/images/mask/valid_image_0_53feb4f2371d7f724b53.mask.png
+2022-05-24 09:07:14,390 INFO    Thread-40 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/32onqd48-media/images/mask/valid_image_0_c3810cbf31b72c88a2bb.mask.png
+2022-05-24 09:07:14,407 INFO    Thread-42 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3kaf4dy8-media/images/mask/valid_image_0_bef816050e4e80e450d3.mask.png
+2022-05-24 09:07:14,431 INFO    Thread-53 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/dst94nd4-media/images/mask/valid_image_0_f575593d23127a87a2a1.mask.png
+2022-05-24 09:07:14,440 INFO    Thread-44 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1pivh91s-media/images/mask/valid_image_0_f88c827962bb08215c57.mask.png
+2022-05-24 09:07:14,443 INFO    Thread-36 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/bjvkf1lj-media/images/mask/valid_image_0_f2fb79a19a9f5763179b.mask.png
+2022-05-24 09:07:14,450 INFO    Thread-35 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/22wxuys9-media/images/valid_image_0_b88621fd6b016ef352d8.png
+2022-05-24 09:07:14,479 INFO    Thread-59 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1bnhdjun-media/images/mask/valid_image_0_dc468acd78b41063c34b.mask.png
+2022-05-24 09:07:14,486 INFO    Thread-56 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/11ska558-media/images/mask/valid_image_0_0554e21a87c0194a76a8.mask.png
+2022-05-24 09:07:14,520 INFO    Thread-37 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/142jrdvt-media/images/valid_image_0_02c7c00dffe81d574c06.png
+2022-05-24 09:07:14,544 INFO    Thread-48 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/9kwdx52f-media/images/mask/valid_image_0_fadc91178b3bfe4ae123.mask.png
+2022-05-24 09:07:14,589 INFO    Thread-65 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/ngrpsek1-media/images/mask/valid_image_0_2ab3fd02b9e755014030.mask.png
+2022-05-24 09:07:14,594 INFO    Thread-46 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/368lm5t2-media/images/mask/valid_image_0_33d604e977322185ffb4.mask.png
+2022-05-24 09:07:14,596 INFO    Thread-54 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/23h55sq9-media/images/mask/valid_image_0_52195939b517112c79bc.mask.png
+2022-05-24 09:07:14,599 INFO    Thread-39 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/189he0z7-media/images/valid_image_0_068fb101d5578accc596.png
+2022-05-24 09:07:14,609 INFO    Thread-43 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/22mzpbij-media/images/valid_image_0_ebfd0e549232a4d6b15b.png
+2022-05-24 09:07:14,611 INFO    Thread-62 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1lpne8a2-media/images/mask/valid_image_0_5a0371f0636167c8ccfa.mask.png
+2022-05-24 09:07:14,621 INFO    Thread-57 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3c3wgnai-media/images/mask/valid_image_0_60dcbe7d29b268265ca1.mask.png
+2022-05-24 09:07:14,632 INFO    Thread-51 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/f6lg4m6e-media/images/mask/valid_image_0_b99235543e68401f1e25.mask.png
+2022-05-24 09:07:14,639 INFO    Thread-41 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2d52lkal-media/images/valid_image_0_0f91ea8bfe1c8face003.png
+2022-05-24 09:07:14,652 INFO    Thread-63 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/vec4rnb9-media/images/mask/valid_image_0_613d007398eba4896697.mask.png
+2022-05-24 09:07:14,672 INFO    Thread-66 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3bvsotv9-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:14,740 INFO    Thread-69 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2jtxeij1-media/images/mask/valid_image_0_1d6caf7237e2611a5c00.mask.png
+2022-05-24 09:07:14,747 INFO    Thread-49 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/34aivrkg-media/images/valid_image_0_34e16b6e4d5afe6cb916.png
+2022-05-24 09:07:14,752 INFO    Thread-52 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1mv5e2ze-media/images/valid_image_0_ec3232a3b26e7f76cc93.png
+2022-05-24 09:07:14,753 INFO    Thread-47 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/17q6reaz-media/images/valid_image_0_fb67dd838cd5cbd126f0.png
+2022-05-24 09:07:14,761 INFO    Thread-55 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/14aa42ve-media/images/valid_image_0_c7397411efafde6403c3.png
+2022-05-24 09:07:14,770 INFO    Thread-60 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1oumyfen-media/images/mask/valid_image_0_e93293498327fc70ae46.mask.png
+2022-05-24 09:07:14,816 INFO    Thread-67 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3hsf6tw1-media/images/mask/valid_image_0_6986dba15ca843f2c1f1.mask.png
+2022-05-24 09:07:14,819 INFO    Thread-58 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1pulj27b-media/images/valid_image_0_47f24874616cd052f579.png
+2022-05-24 09:07:14,876 INFO    Thread-61 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2ugcqd87-media/images/valid_image_0_63e67afa20542966c166.png
+2022-05-24 09:07:14,900 INFO    Thread-64 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1arqlt23-media/images/valid_image_0_f9c78ad278abb0a204f8.png
+2022-05-24 09:07:14,907 INFO    Thread-70 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3dea7eta-media/images/mask/valid_image_0_e981cda0d8a69d1be583.mask.png
+2022-05-24 09:07:14,953 INFO    Thread-68 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1eb0zipt-media/images/valid_image_0_395e5538b1fb80367e78.png
+2022-05-24 09:07:14,963 INFO    Thread-45 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2iq75kr8-media/images/valid_image_0_051ff3e879d94ff56746.png
+2022-05-24 09:07:15,464 INFO    Thread-71 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/ygysv78e-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:15,830 INFO    Thread-72 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2sr46hbs-media/images/valid_image_0_fb67dd838cd5cbd126f0.png
+2022-05-24 09:07:16,205 INFO    Thread-73 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1u0e7828-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:16,952 INFO    Thread-74 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3r50mkod-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:17,548 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: log_artifact
+2022-05-24 09:07:17,548 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: log_artifact
+2022-05-24 09:07:17,684 INFO    Thread-75 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3lvo7122-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:18,451 INFO    Thread-76 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/8dnb4muj-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:19,199 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:19,224 INFO    Thread-79 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2gmti50r-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:19,582 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:07:19,973 INFO    Thread-80 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/10lyinxn-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:20,684 INFO    Thread-81 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3hko05u2-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:21,781 ERROR   Thread-82 :3640 [internal_api.py:upload_file():1640] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/hutom_miai/has_multi_organ/2je2h8vz/media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png?Expires=1653469640&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=bj%2FmSaeFr0WbP7KjYnXk7TZdVZjUA1QMfqZ4ctAWYzFCeAczbrzreE74bYAjHL%2FxtSpCHeh8v6UjcFHTENZ57dizckg0xwEJrGRBMWpBitN%2Fe4pmJIZN8isSE7M7bKWyNuWmth3ypPzYw%2FzjeBx24BcAaVWbMtpZhfXi%2BDozznm39pnpA5vVzAh8W3ywM0NuDI5H77dsKBf2k3Zm6%2BRrOV6%2B69jzBo4IQ4Hgxq9wd9oXfA9tWht9q6jXp8htKAbRf9E6Jpx5UwlTslIbOQHQIiUCj5KgxfxGVo97DN6mMccoR0ymGxUbCStJaJ8vLbfIGUPu3ed26kgdfMjwl4M4Bw%3D%3D: 429 Client Error: Too Many Requests for url: https://storage.googleapis.com/wandb-production.appspot.com/hutom_miai/has_multi_organ/2je2h8vz/media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png?Expires=1653469640&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=bj%2FmSaeFr0WbP7KjYnXk7TZdVZjUA1QMfqZ4ctAWYzFCeAczbrzreE74bYAjHL%2FxtSpCHeh8v6UjcFHTENZ57dizckg0xwEJrGRBMWpBitN%2Fe4pmJIZN8isSE7M7bKWyNuWmth3ypPzYw%2FzjeBx24BcAaVWbMtpZhfXi%2BDozznm39pnpA5vVzAh8W3ywM0NuDI5H77dsKBf2k3Zm6%2BRrOV6%2B69jzBo4IQ4Hgxq9wd9oXfA9tWht9q6jXp8htKAbRf9E6Jpx5UwlTslIbOQHQIiUCj5KgxfxGVo97DN6mMccoR0ymGxUbCStJaJ8vLbfIGUPu3ed26kgdfMjwl4M4Bw%3D%3D
+2022-05-24 09:07:21,782 ERROR   Thread-82 :3640 [internal_api.py:upload_file():1642] upload_file request headers: {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '334'}
+2022-05-24 09:07:21,782 ERROR   Thread-82 :3640 [internal_api.py:upload_file():1644] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>SlowDown</Code><Message>Please reduce your request rate.</Message><Details>Changing object wandb-production.appspot.com/hutom_miai/has_multi_organ/2je2h8vz/media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png too quickly, please slow down</Details></Error>"
+2022-05-24 09:07:23,205 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:23,494 INFO    Thread-82 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3ohhzjh3-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:24,228 INFO    Thread-83 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/23000gm8-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:24,969 INFO    Thread-84 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/2iezbep0-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:25,208 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:25,778 INFO    Thread-85 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1bizh6uq-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:26,518 INFO    Thread-86 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3d1cw5q6-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:27,211 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:27,252 INFO    Thread-87 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/1mcx339i-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:27,977 INFO    Thread-88 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/3owt8014-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:28,715 INFO    Thread-89 :3640 [upload_job.py:push():132] Uploaded file /tmp/tmp80yl3r6cwandb/uq99zp8c-media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:29,215 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:31,219 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:33,221 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:34,547 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:35,224 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:39,648 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:44,749 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:49,207 INFO    Thread-78 :3640 [upload_job.py:push():90] Uploaded file /root/.cache/wandb/artifacts/obj/md5/f8/385a7cac7c0fc22372c8435a5776f8
+2022-05-24 09:07:49,850 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:50,390 INFO    SenderThread:3640 [sender.py:send_request_log_artifact():1005] logged artifact model - {'id': 'QXJ0aWZhY3Q6MTMyODk3MzM4', 'digest': 'a50625e625d1cef93514eed0c43a7eb6', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIwNjg5MTc0', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTMxNDg0NDg1', 'versionIndex': 107}}, 'version': 'latest'}
+2022-05-24 09:07:50,651 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:07:50,871 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:07:50,872 DEBUG   SenderThread:3640 [sender.py:send():232] send: telemetry
+2022-05-24 09:07:50,872 DEBUG   SenderThread:3640 [sender.py:send():232] send: exit
+2022-05-24 09:07:50,872 INFO    SenderThread:3640 [sender.py:send_exit():368] handling exit code: 1
+2022-05-24 09:07:50,873 INFO    SenderThread:3640 [sender.py:send_exit():370] handling runtime: 405
+2022-05-24 09:07:50,873 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:07:50,873 INFO    SenderThread:3640 [sender.py:send_exit():376] send defer
+2022-05-24 09:07:50,873 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:50,874 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:50,874 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:50,874 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:50,875 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:50,875 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 0
+2022-05-24 09:07:50,875 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:50,875 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 0
+2022-05-24 09:07:50,875 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 1
+2022-05-24 09:07:50,876 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:50,876 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 1
+2022-05-24 09:07:51,021 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:51,021 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 1
+2022-05-24 09:07:51,021 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:51,021 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 2
+2022-05-24 09:07:51,022 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:51,022 DEBUG   SenderThread:3640 [sender.py:send():232] send: stats
+2022-05-24 09:07:51,023 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:51,023 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 2
+2022-05-24 09:07:51,023 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:51,023 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 2
+2022-05-24 09:07:51,023 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 3
+2022-05-24 09:07:51,024 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:51,024 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 3
+2022-05-24 09:07:51,024 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:51,024 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 3
+2022-05-24 09:07:51,024 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 4
+2022-05-24 09:07:51,024 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:51,024 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 4
+2022-05-24 09:07:51,025 DEBUG   SenderThread:3640 [sender.py:send():232] send: summary
+2022-05-24 09:07:51,026 INFO    SenderThread:3640 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-24 09:07:51,026 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:51,026 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 4
+2022-05-24 09:07:51,026 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 5
+2022-05-24 09:07:51,027 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:51,027 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 5
+2022-05-24 09:07:51,027 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:51,027 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 5
+2022-05-24 09:07:51,125 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:51,246 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/wandb-summary.json
+2022-05-24 09:07:51,246 INFO    Thread-7  :3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/config.yaml
+2022-05-24 09:07:51,542 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 6
+2022-05-24 09:07:51,543 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:51,543 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:51,543 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 6
+2022-05-24 09:07:51,544 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:51,544 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 6
+2022-05-24 09:07:51,544 INFO    SenderThread:3640 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-05-24 09:07:51,645 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,248 INFO    SenderThread:3640 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/config.yaml
+2022-05-24 09:07:52,249 INFO    SenderThread:3640 [dir_watcher.py:finish():342] scan: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files
+2022-05-24 09:07:52,249 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/wandb-metadata.json wandb-metadata.json
+2022-05-24 09:07:52,249 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/config.yaml config.yaml
+2022-05-24 09:07:52,249 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/requirements.txt requirements.txt
+2022-05-24 09:07:52,249 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/wandb-summary.json wandb-summary.json
+2022-05-24 09:07:52,249 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/conda-environment.yaml conda-environment.yaml
+2022-05-24 09:07:52,256 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log output.log
+2022-05-24 09:07:52,256 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_7648fa281385b79a1dcf.png media/images/valid_image_0_7648fa281385b79a1dcf.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_4450cc14b9099d7dabde.png media/images/valid_image_0_4450cc14b9099d7dabde.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_213e500d2c30e27ea17f.png media/images/valid_image_0_213e500d2c30e27ea17f.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_27e2f88bd3bbdeeaad6e.png media/images/valid_image_0_27e2f88bd3bbdeeaad6e.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_63e67afa20542966c166.png media/images/valid_image_0_63e67afa20542966c166.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_1726f37db43b8ae4c64e.png media/images/valid_image_0_1726f37db43b8ae4c64e.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_b88621fd6b016ef352d8.png media/images/valid_image_0_b88621fd6b016ef352d8.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_14073d2209384de803be.png media/images/valid_image_0_14073d2209384de803be.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_ec3232a3b26e7f76cc93.png media/images/valid_image_0_ec3232a3b26e7f76cc93.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_c7397411efafde6403c3.png media/images/valid_image_0_c7397411efafde6403c3.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_02c7c00dffe81d574c06.png media/images/valid_image_0_02c7c00dffe81d574c06.png
+2022-05-24 09:07:52,257 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_f9c78ad278abb0a204f8.png media/images/valid_image_0_f9c78ad278abb0a204f8.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_fb67dd838cd5cbd126f0.png media/images/valid_image_0_fb67dd838cd5cbd126f0.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_b9f63029a319ac91b36d.png media/images/valid_image_0_b9f63029a319ac91b36d.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_068fb101d5578accc596.png media/images/valid_image_0_068fb101d5578accc596.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_47f24874616cd052f579.png media/images/valid_image_0_47f24874616cd052f579.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_051ff3e879d94ff56746.png media/images/valid_image_0_051ff3e879d94ff56746.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_66257117451a54268b7b.png media/images/valid_image_0_66257117451a54268b7b.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_0f91ea8bfe1c8face003.png media/images/valid_image_0_0f91ea8bfe1c8face003.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_395e5538b1fb80367e78.png media/images/valid_image_0_395e5538b1fb80367e78.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_34e16b6e4d5afe6cb916.png media/images/valid_image_0_34e16b6e4d5afe6cb916.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_ebfd0e549232a4d6b15b.png media/images/valid_image_0_ebfd0e549232a4d6b15b.png
+2022-05-24 09:07:52,258 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_66cc53fb5afc80c01725.png media/images/valid_image_0_66cc53fb5afc80c01725.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_451e1a157ea99a7f65fb.png media/images/valid_image_0_451e1a157ea99a7f65fb.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/valid_image_0_2a3245f4b51d334dc110.png media/images/valid_image_0_2a3245f4b51d334dc110.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_1d6caf7237e2611a5c00.mask.png media/images/mask/valid_image_0_1d6caf7237e2611a5c00.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_5a0371f0636167c8ccfa.mask.png media/images/mask/valid_image_0_5a0371f0636167c8ccfa.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f88c827962bb08215c57.mask.png media/images/mask/valid_image_0_f88c827962bb08215c57.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_bef816050e4e80e450d3.mask.png media/images/mask/valid_image_0_bef816050e4e80e450d3.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_9cda00311f6b06cc3303.mask.png media/images/mask/valid_image_0_9cda00311f6b06cc3303.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_dc468acd78b41063c34b.mask.png media/images/mask/valid_image_0_dc468acd78b41063c34b.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_613d007398eba4896697.mask.png media/images/mask/valid_image_0_613d007398eba4896697.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_c4eb29e309e3cb53d3a9.mask.png media/images/mask/valid_image_0_c4eb29e309e3cb53d3a9.mask.png
+2022-05-24 09:07:52,259 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f7000463a39059229885.mask.png media/images/mask/valid_image_0_f7000463a39059229885.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f2fb79a19a9f5763179b.mask.png media/images/mask/valid_image_0_f2fb79a19a9f5763179b.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_27fd7457665004b55a54.mask.png media/images/mask/valid_image_0_27fd7457665004b55a54.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_f575593d23127a87a2a1.mask.png media/images/mask/valid_image_0_f575593d23127a87a2a1.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_74b136140bc57a9adce9.mask.png media/images/mask/valid_image_0_74b136140bc57a9adce9.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_76805ebdc296e8497126.mask.png media/images/mask/valid_image_0_76805ebdc296e8497126.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_b99235543e68401f1e25.mask.png media/images/mask/valid_image_0_b99235543e68401f1e25.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png media/images/mask/valid_image_0_ef2a4c8949cdab1ef24e.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_b7913503dab763365165.mask.png media/images/mask/valid_image_0_b7913503dab763365165.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_52195939b517112c79bc.mask.png media/images/mask/valid_image_0_52195939b517112c79bc.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_0c6bb22ed8f88eebad86.mask.png media/images/mask/valid_image_0_0c6bb22ed8f88eebad86.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_60dcbe7d29b268265ca1.mask.png media/images/mask/valid_image_0_60dcbe7d29b268265ca1.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_33d604e977322185ffb4.mask.png media/images/mask/valid_image_0_33d604e977322185ffb4.mask.png
+2022-05-24 09:07:52,260 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_20eee2b972b72255f48b.mask.png media/images/mask/valid_image_0_20eee2b972b72255f48b.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_c3810cbf31b72c88a2bb.mask.png media/images/mask/valid_image_0_c3810cbf31b72c88a2bb.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_e981cda0d8a69d1be583.mask.png media/images/mask/valid_image_0_e981cda0d8a69d1be583.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_fadc91178b3bfe4ae123.mask.png media/images/mask/valid_image_0_fadc91178b3bfe4ae123.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_0554e21a87c0194a76a8.mask.png media/images/mask/valid_image_0_0554e21a87c0194a76a8.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_e93293498327fc70ae46.mask.png media/images/mask/valid_image_0_e93293498327fc70ae46.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_2ab3fd02b9e755014030.mask.png media/images/mask/valid_image_0_2ab3fd02b9e755014030.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_150afa6ae9a95e4a6000.mask.png media/images/mask/valid_image_0_150afa6ae9a95e4a6000.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_64997cb408d0674d7f47.mask.png media/images/mask/valid_image_0_64997cb408d0674d7f47.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_6986dba15ca843f2c1f1.mask.png media/images/mask/valid_image_0_6986dba15ca843f2c1f1.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_a2878888414ab3e5d649.mask.png media/images/mask/valid_image_0_a2878888414ab3e5d649.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/media/images/mask/valid_image_0_53feb4f2371d7f724b53.mask.png media/images/mask/valid_image_0_53feb4f2371d7f724b53.mask.png
+2022-05-24 09:07:52,261 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 7
+2022-05-24 09:07:52,262 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:52,264 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:52,264 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 7
+2022-05-24 09:07:52,265 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:52,265 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 7
+2022-05-24 09:07:52,265 INFO    SenderThread:3640 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-24 09:07:52,365 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,366 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:52,467 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,467 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:52,569 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,569 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:52,671 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,671 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:52,773 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,773 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:52,875 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,875 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:52,977 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:52,977 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:53,011 INFO    Thread-91 :3640 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/requirements.txt
+2022-05-24 09:07:53,020 INFO    Thread-93 :3640 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/output.log
+2022-05-24 09:07:53,023 INFO    Thread-90 :3640 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/config.yaml
+2022-05-24 09:07:53,070 INFO    Thread-92 :3640 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/files/wandb-summary.json
+2022-05-24 09:07:53,080 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:53,080 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:53,182 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:53,183 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:53,271 INFO    Thread-6  :3640 [sender.py:transition_state():389] send defer: 8
+2022-05-24 09:07:53,271 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:53,271 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 8
+2022-05-24 09:07:53,272 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:53,272 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 8
+2022-05-24 09:07:53,284 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:54,249 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 9
+2022-05-24 09:07:54,250 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:54,250 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:54,250 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 9
+2022-05-24 09:07:54,251 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:54,251 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 9
+2022-05-24 09:07:54,251 INFO    SenderThread:3640 [sender.py:transition_state():389] send defer: 10
+2022-05-24 09:07:54,251 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: defer
+2022-05-24 09:07:54,252 DEBUG   SenderThread:3640 [sender.py:send():232] send: final
+2022-05-24 09:07:54,252 INFO    HandlerThread:3640 [handler.py:handle_request_defer():164] handle defer: 10
+2022-05-24 09:07:54,252 DEBUG   SenderThread:3640 [sender.py:send():232] send: footer
+2022-05-24 09:07:54,252 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: defer
+2022-05-24 09:07:54,252 INFO    SenderThread:3640 [sender.py:send_request_defer():385] handle sender defer: 10
+2022-05-24 09:07:54,352 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: poll_exit
+2022-05-24 09:07:54,352 DEBUG   SenderThread:3640 [sender.py:send_request():246] send_request: poll_exit
+2022-05-24 09:07:54,352 INFO    SenderThread:3640 [file_pusher.py:join():150] waiting for file pusher
+2022-05-24 09:07:54,691 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: sampled_history
+2022-05-24 09:07:54,692 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: get_summary
+2022-05-24 09:07:54,694 DEBUG   HandlerThread:3640 [handler.py:handle_request():141] handle_request: shutdown
+2022-05-24 09:07:54,694 INFO    HandlerThread:3640 [handler.py:finish():806] shutting down handler
+2022-05-24 09:07:55,252 INFO    WriterThread:3640 [datastore.py:close():279] close: /home/sukmin/JH_MONAI/wandb/run-20220524_090047-2je2h8vz/run-2je2h8vz.wandb
+2022-05-24 09:07:55,589 INFO    SenderThread:3640 [sender.py:finish():1110] shutting down sender
+2022-05-24 09:07:55,589 INFO    SenderThread:3640 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-24 09:07:55,589 INFO    SenderThread:3640 [file_pusher.py:join():150] waiting for file pusher
+2022-05-24 09:07:55,590 INFO    MainThread:3640 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,153 @@
+wandb_version: 1
+
+BATCH_SIZE:
+  desc: null
+  value: 4
+FOLD:
+  desc: null
+  value: 4
+FOLDS:
+  desc: null
+  value: 5
+LOGDIR:
+  desc: null
+  value: /nas3/sukmin/multi_organ_model/unet_focal_patch_196
+Loss_NAME:
+  desc: null
+  value: DiceFocal
+MODEL_NAME:
+  desc: null
+  value: unet
+Optim_NAME:
+  desc: null
+  value: AdamW
+TARGET_NAME:
+  desc: null
+  value: multi_organ
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.16
+    framework: huggingface
+    huggingface_version: 4.17.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.12
+    start_time: 1653385115
+    t:
+      1:
+      - 1
+      - 10
+      - 11
+      - 41
+      - 48
+      - 49
+      - 55
+      2:
+      - 1
+      - 10
+      - 11
+      - 41
+      - 48
+      - 49
+      - 55
+      3:
+      - 1
+      4: 3.8.12
+      5: 0.12.16
+      6: 4.17.0
+      8:
+      - 5
+a_max:
+  desc: null
+  value: 300.0
+a_min:
+  desc: null
+  value: -150.0
+channel_in:
+  desc: null
+  value: 1
+channel_out:
+  desc: null
+  value: 6
+class_names:
+  desc: null
+  value:
+    '1': Liver
+    '2': Stomach
+    '3': Pancreas
+    '4': Gallbladder
+    '5': Spleen
+device:
+  desc: null
+  value: cuda
+dropout:
+  desc: null
+  value: 0.1
+embed_dim:
+  desc: null
+  value: 768
+eval_num:
+  desc: null
+  value: 500
+ext_layers:
+  desc: null
+  value:
+  - 3
+  - 6
+  - 9
+  - 12
+input_shape:
+  desc: null
+  value:
+  - 196
+  - 196
+  - 64
+load_model:
+  desc: null
+  value: false
+lr_decay:
+  desc: null
+  value: 1.0e-05
+lr_init:
+  desc: null
+  value: 0.0005
+max_iterations:
+  desc: null
+  value: 50000
+mlp_dim:
+  desc: null
+  value: 3072
+momentum:
+  desc: null
+  value: 0.9
+num_heads:
+  desc: null
+  value: 12
+num_layers:
+  desc: null
+  value: 12
+num_workers:
+  desc: null
+  value: 8
+patch_size:
+  desc: null
+  value: 32
+root:
+  desc: null
+  value: /nas3/sukmin/dataset/Task002_Multi_Organ
+samples_per_volume:
+  desc: null
+  value: 20
+save_name:
+  desc: null
+  value: unet_focal_patch_196
+seeds:
+  desc: null
+  value: 42
+use_cuda:
+  desc: null
+  value: true
+visualize:
+  desc: null
+  value: true

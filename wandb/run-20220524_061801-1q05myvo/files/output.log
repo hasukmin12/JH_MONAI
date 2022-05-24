@@ -1,0 +1,62 @@
+
+Train 75 Valid 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loading dataset:  63%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                             | 47/75 [12:07<07:13, 15.49s/it]
+Traceback (most recent call last):
+  File "/opt/monai/monai/transforms/transform.py", line 89, in apply_transform
+    return _apply_transform(transform, data, unpack_items)
+  File "/opt/monai/monai/transforms/transform.py", line 53, in _apply_transform
+    return transform(parameters)
+  File "/opt/monai/monai/transforms/spatial/dictionary.py", line 514, in __call__
+    d[key], old_affine, new_affine = self.spacing_transform(
+  File "/opt/monai/monai/transforms/spatial/array.py", line 435, in __call__
+    output_data, new_affine = self.sp_resample(
+  File "/opt/monai/monai/transforms/spatial/array.py", line 263, in __call__
+    output_data = affine_xform(img_.unsqueeze(0), theta=xform, spatial_size=spatial_size).squeeze(0)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/monai/monai/networks/layers/spatial_transforms.py", line 542, in forward
+    grid = nn.functional.affine_grid(theta=theta[:, :sr], size=list(dst_size), align_corners=self.align_corners)
+  File "/opt/conda/lib/python3.8/site-packages/torch/nn/functional.py", line 4297, in affine_grid
+    return torch.affine_grid_generator(theta, size, align_corners)
+RuntimeError: [enforce fail at CPUAllocator.cpp:62] . DefaultCPUAllocator: can't allocate memory: you tried to allocate 8815960296 bytes. Error code 12 (Cannot allocate memory)
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 332, in <module>
+    main()
+  File "train.py", line 163, in main
+    train_ds = CacheDataset(
+  File "/opt/monai/monai/data/dataset.py", line 723, in __init__
+    self.set_data(data)
+  File "/opt/monai/monai/data/dataset.py", line 748, in set_data
+    self._cache = _compute_cache()
+  File "/opt/monai/monai/data/dataset.py", line 737, in _compute_cache
+    return self._fill_cache()
+  File "/opt/monai/monai/data/dataset.py", line 757, in _fill_cache
+    return list(
+  File "/opt/conda/lib/python3.8/site-packages/tqdm/std.py", line 1180, in __iter__
+    for obj in iterable:
+  File "/opt/conda/lib/python3.8/multiprocessing/pool.py", line 868, in next
+    raise value
+  File "/opt/conda/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/opt/monai/monai/data/dataset.py", line 777, in _load_cache_item
+    item = apply_transform(_xform, item)
+  File "/opt/monai/monai/transforms/transform.py", line 113, in apply_transform
+    raise RuntimeError(f"applying transform {transform}") from e
+RuntimeError: applying transform <monai.transforms.spatial.dictionary.Spacingd object at 0x7fad1a63f1f0>

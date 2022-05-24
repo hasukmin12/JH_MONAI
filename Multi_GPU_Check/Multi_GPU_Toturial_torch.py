@@ -8,7 +8,7 @@ from torch.utils.data import Dataset, DataLoader
 import os
 
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
 
 # 매개변수와 DataLoaders
 input_size = 5

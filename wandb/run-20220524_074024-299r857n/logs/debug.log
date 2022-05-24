@@ -1,0 +1,25 @@
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_setup.py:_flush():76] Loading settings from /home/sukmin/JH_MONAI/wandb/settings
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_init.py:_log_setup():428] Logging user logs to /home/sukmin/JH_MONAI/wandb/run-20220524_074024-299r857n/logs/debug.log
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_init.py:_log_setup():429] Logging internal logs to /home/sukmin/JH_MONAI/wandb/run-20220524_074024-299r857n/logs/debug-internal.log
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_init.py:init():462] calling init triggers
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {}
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [wandb_init.py:init():515] starting backend
+2022-05-24 07:40:24,783 INFO    MainThread:1456 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-05-24 07:40:24,802 INFO    MainThread:1456 [backend.py:ensure_launched():217] starting backend process...
+2022-05-24 07:40:24,812 INFO    MainThread:1456 [backend.py:ensure_launched():222] started backend process with pid: 1544
+2022-05-24 07:40:24,814 INFO    MainThread:1456 [wandb_init.py:init():525] backend started and connected
+2022-05-24 07:40:24,823 INFO    MainThread:1456 [wandb_init.py:init():596] updated telemetry
+2022-05-24 07:40:24,847 INFO    MainThread:1456 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-05-24 07:40:26,373 INFO    MainThread:1456 [wandb_run.py:_on_init():1924] communicating current version
+2022-05-24 07:40:26,457 INFO    MainThread:1456 [wandb_run.py:_on_init():1928] got version response 
+2022-05-24 07:40:26,457 INFO    MainThread:1456 [wandb_init.py:init():662] starting run threads in backend
+2022-05-24 07:40:27,427 INFO    MainThread:1456 [wandb_run.py:_console_start():1898] atexit reg
+2022-05-24 07:40:27,428 INFO    MainThread:1456 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.REDIRECT
+2022-05-24 07:40:27,428 INFO    MainThread:1456 [wandb_run.py:_redirect():1776] Redirecting console.
+2022-05-24 07:40:27,432 INFO    MainThread:1456 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-05-24 07:40:27,433 INFO    MainThread:1456 [wandb_init.py:init():688] run started, returning control to user process
+2022-05-24 07:40:27,434 INFO    MainThread:1456 [wandb_run.py:_config_callback():1136] config_cb None None {'TARGET_NAME': 'multi_organ', 'save_name': 'unet_focal_patch_196', 'Loss_NAME': 'DiceFocal', 'channel_in': 1, 'channel_out': 6, 'Optim_NAME': 'AdamW', 'MODEL_NAME': 'unet', 'load_model': False, 'BATCH_SIZE': 4, 'max_iterations': 50000, 'eval_num': 500, 'samples_per_volume': 20, 'seeds': 42, 'num_workers': 8, 'FOLD': 4, 'FOLDS': 5, 'input_shape': [192, 192, 80], 'patch_size': 32, 'mlp_dim': 3072, 'num_layers': 12, 'ext_layers': [3, 6, 9, 12], 'embed_dim': 768, 'num_heads': 12, 'dropout': 0.1, 'a_min': -150.0, 'a_max': 300.0, 'lr_init': 0.0005, 'lr_decay': 1e-05, 'momentum': 0.9, 'root': '/nas3/sukmin/dataset/Task002_Multi_Organ', 'class_names': {1: 'Liver', 2: 'Stomach', 3: 'Pancreas', 4: 'Gallbladder', 5: 'Spleen'}, 'LOGDIR': '/nas3/sukmin/multi_organ_model/unet_focal_patch_196', 'use_cuda': True, 'device': 'cuda'}
