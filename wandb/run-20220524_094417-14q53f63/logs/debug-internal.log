@@ -155,3 +155,33 @@
 2022-05-24 09:51:29,013 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
 2022-05-24 09:51:44,236 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
 2022-05-24 09:51:44,236 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:51:57,103 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:51:59,462 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:51:59,464 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:52:14,690 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:52:14,690 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:52:29,627 DEBUG   SenderThread:7868 [sender.py:send():232] send: stats
+2022-05-24 09:52:29,914 DEBUG   HandlerThread:7868 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-24 09:52:29,915 DEBUG   SenderThread:7868 [sender.py:send_request():246] send_request: stop_status
+2022-05-24 09:52:33,791 WARNING MainThread:7868 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-05-24 09:52:33,819 DEBUG   SenderThread:7868 [sender.py:send():232] send: telemetry
+2022-05-24 09:52:34,514 WARNING MainThread:7868 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2022-05-24 09:52:34,514 ERROR   MainThread:7868 [internal.py:wandb_internal():156] Internal process interrupted.
+2022-05-24 09:52:34,819 INFO    WriterThread:7868 [datastore.py:close():279] close: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/run-14q53f63.wandb
+2022-05-24 09:52:34,820 INFO    SenderThread:7868 [sender.py:finish():1110] shutting down sender
+2022-05-24 09:52:34,820 INFO    HandlerThread:7868 [handler.py:finish():806] shutting down handler
+2022-05-24 09:52:34,820 INFO    SenderThread:7868 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-05-24 09:52:35,601 INFO    SenderThread:7868 [dir_watcher.py:finish():342] scan: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files
+2022-05-24 09:52:35,601 INFO    SenderThread:7868 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/wandb-metadata.json wandb-metadata.json
+2022-05-24 09:52:35,601 INFO    SenderThread:7868 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/config.yaml config.yaml
+2022-05-24 09:52:35,601 INFO    SenderThread:7868 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/requirements.txt requirements.txt
+2022-05-24 09:52:35,602 INFO    SenderThread:7868 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/wandb-summary.json wandb-summary.json
+2022-05-24 09:52:35,614 INFO    SenderThread:7868 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/conda-environment.yaml conda-environment.yaml
+2022-05-24 09:52:35,615 INFO    SenderThread:7868 [dir_watcher.py:finish():356] scan save: /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log output.log
+2022-05-24 09:52:35,621 INFO    SenderThread:7868 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-24 09:52:35,621 INFO    SenderThread:7868 [file_pusher.py:join():150] waiting for file pusher
+2022-05-24 09:52:36,345 INFO    Thread-13 :7868 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/requirements.txt
+2022-05-24 09:52:36,353 INFO    Thread-12 :7868 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/config.yaml
+2022-05-24 09:52:36,355 INFO    Thread-15 :7868 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/output.log
+2022-05-24 09:52:36,371 INFO    Thread-14 :7868 [upload_job.py:push():132] Uploaded file /home/sukmin/JH_MONAI/wandb/run-20220524_094417-14q53f63/files/wandb-summary.json
+2022-05-24 09:52:36,815 INFO    MainThread:7868 [internal.py:handle_exit():80] Internal process exited

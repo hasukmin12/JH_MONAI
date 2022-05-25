@@ -46,7 +46,7 @@ def main():
     parser.add_argument('--samples', default=20, dest='samples_per_volume', type=int)
 
     parser.add_argument('--seeds', default=42, dest='seeds', type=int)
-    parser.add_argument('--workers', default=8, dest='num_workers', type=int)
+    parser.add_argument('--workers', default=4, dest='num_workers', type=int)
     parser.add_argument('--fold', '-f', default=4, dest='FOLD', type=int)
     parser.add_argument('--num_folds', default=5, dest='FOLDS', type=int)
     parser.add_argument('--spacing', default='1,1,1', dest='spacing', type=str)
@@ -54,7 +54,7 @@ def main():
     
     # Roi는 꼭 16의 배수로 해야한다.(DownConv 과정에서 절반씩 줄어드는데 100같은거 해버리면 채널 128될때쯤에 25가되서 13,14로 나뉘어서 에러남)
     # parser.add_argument('--input', default='96,96,96', dest='input_shape', type=str)
-    parser.add_argument('--input', default='192,192,80', dest='input_shape', type=str)
+    parser.add_argument('--input', default='160,160,64', dest='input_shape', type=str)
 
     # UNETR의 경우 args.patch_size를 꼭 정의해줘야한다.
     # parser.add_argument('--patch', default=32, dest='patch_size', type=int)
@@ -163,6 +163,8 @@ def main():
     # if args.TARGET_NAME == 'rib':
     #     from trans_rib import train_transforms, val_transforms
     #     train_transforms, val_transforms = call_transforms(args)
+
+    args.num_workers = torch.cuda.device_count() * 4
     
     train_ds = CacheDataset(
         data=train_list,

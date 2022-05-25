@@ -1,0 +1,28 @@
+2022-05-24 09:52:49,858 INFO    MainThread:9060 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2022-05-24 09:52:49,858 INFO    MainThread:9060 [wandb_setup.py:_flush():76] Loading settings from /home/sukmin/JH_MONAI/wandb/settings
+2022-05-24 09:52:49,858 INFO    MainThread:9060 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2022-05-24 09:52:49,858 INFO    MainThread:9060 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2022-05-24 09:52:49,858 INFO    MainThread:9060 [wandb_init.py:_log_setup():428] Logging user logs to /home/sukmin/JH_MONAI/wandb/run-20220524_095249-2wf3co0b/logs/debug.log
+2022-05-24 09:52:49,859 INFO    MainThread:9060 [wandb_init.py:_log_setup():429] Logging internal logs to /home/sukmin/JH_MONAI/wandb/run-20220524_095249-2wf3co0b/logs/debug-internal.log
+2022-05-24 09:52:49,859 INFO    MainThread:9060 [wandb_init.py:init():462] calling init triggers
+2022-05-24 09:52:49,859 INFO    MainThread:9060 [wandb_init.py:init():465] wandb.init called with sweep_config: {}
+config: {}
+2022-05-24 09:52:49,859 INFO    MainThread:9060 [wandb_init.py:init():515] starting backend
+2022-05-24 09:52:49,859 INFO    MainThread:9060 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-05-24 09:52:49,879 INFO    MainThread:9060 [backend.py:ensure_launched():217] starting backend process...
+2022-05-24 09:52:49,889 INFO    MainThread:9060 [backend.py:ensure_launched():222] started backend process with pid: 9148
+2022-05-24 09:52:49,890 INFO    MainThread:9060 [wandb_init.py:init():525] backend started and connected
+2022-05-24 09:52:49,898 INFO    MainThread:9060 [wandb_init.py:init():596] updated telemetry
+2022-05-24 09:52:49,923 INFO    MainThread:9060 [wandb_init.py:init():627] communicating run to backend with 30 second timeout
+2022-05-24 09:52:51,389 INFO    MainThread:9060 [wandb_run.py:_on_init():1924] communicating current version
+2022-05-24 09:52:51,469 INFO    MainThread:9060 [wandb_run.py:_on_init():1928] got version response 
+2022-05-24 09:52:51,469 INFO    MainThread:9060 [wandb_init.py:init():662] starting run threads in backend
+2022-05-24 09:52:52,474 INFO    MainThread:9060 [wandb_run.py:_console_start():1898] atexit reg
+2022-05-24 09:52:52,475 INFO    MainThread:9060 [wandb_run.py:_redirect():1771] redirect: SettingsConsole.REDIRECT
+2022-05-24 09:52:52,476 INFO    MainThread:9060 [wandb_run.py:_redirect():1776] Redirecting console.
+2022-05-24 09:52:52,480 INFO    MainThread:9060 [wandb_run.py:_redirect():1832] Redirects installed.
+2022-05-24 09:52:52,480 INFO    MainThread:9060 [wandb_init.py:init():688] run started, returning control to user process
+2022-05-24 09:52:52,482 INFO    MainThread:9060 [wandb_run.py:_config_callback():1136] config_cb None None {'TARGET_NAME': 'multi_organ', 'save_name': 'unet_focal_patch_192', 'Loss_NAME': 'DiceFocal', 'channel_in': 1, 'channel_out': 6, 'visualize': True, 'Optim_NAME': 'AdamW', 'MODEL_NAME': 'unet', 'load_model': False, 'BATCH_SIZE': 4, 'max_iterations': 50000, 'eval_num': 500, 'samples_per_volume': 20, 'seeds': 42, 'num_workers': 8, 'FOLD': 4, 'FOLDS': 5, 'spacing': '1,1,1', 'input_shape': [192, 192, 80], 'patch_size': 32, 'mlp_dim': 3072, 'num_layers': 12, 'ext_layers': [3, 6, 9, 12], 'embed_dim': 768, 'num_heads': 12, 'dropout': 0.1, 'a_min': 0.0, 'a_max': 500.0, 'lr_init': 0.0005, 'lr_decay': 1e-05, 'momentum': 0.9, 'root': '/nas3/sukmin/dataset/Task002_Multi_Organ', 'class_names': {1: 'Liver', 2: 'Stomach', 3: 'Pancreas', 4: 'Gallbladder', 5: 'Spleen'}, 'LOGDIR': '/nas3/sukmin/multi_organ_model/unet_focal_patch_192', 'use_cuda': True, 'device': 'cuda'}
+2022-05-24 09:59:05,302 INFO    MainThread:9060 [wandb_watch.py:watch():47] Watching
+2022-05-24 10:01:58,852 INFO    MainThread:9060 [wandb_run.py:_atexit_cleanup():1867] got exitcode: 255
+2022-05-24 10:01:58,870 INFO    MainThread:9060 [wandb_run.py:_restore():1839] restore

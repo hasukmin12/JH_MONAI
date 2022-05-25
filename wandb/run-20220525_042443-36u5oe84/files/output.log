@@ -1,0 +1,355 @@
+
+Train 75 Valid 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loading dataset: 100%|██████████████████████████████████████████████████████████████████| 75/75 [02:06<00:00,  1.69s/it]
+
+
+
+
+
+
+
+
+
+
+Loading dataset: 100%|██████████████████████████████████████████████████████████████████| 25/25 [00:47<00:00,  1.91s/it]
+Training (X / X Steps) (loss=X.X):   0%|                                                         | 0/19 [00:00<?, ?it/s]
+UNet(
+  (model): Sequential(
+    (0): ResidualUnit(
+      (conv): Sequential(
+        (unit0): Convolution(
+          (conv): Conv3d(1, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+          (adn): ADN(
+            (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+            (D): Dropout(p=0.1, inplace=False)
+            (A): PReLU(num_parameters=1)
+          )
+        )
+        (unit1): Convolution(
+          (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (adn): ADN(
+            (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+            (D): Dropout(p=0.1, inplace=False)
+            (A): PReLU(num_parameters=1)
+          )
+        )
+      )
+      (residual): Conv3d(1, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+    )
+    (1): SkipConnection(
+      (submodule): Sequential(
+        (0): ResidualUnit(
+          (conv): Sequential(
+            (unit0): Convolution(
+              (conv): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+              (adn): ADN(
+                (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                (D): Dropout(p=0.1, inplace=False)
+                (A): PReLU(num_parameters=1)
+              )
+            )
+            (unit1): Convolution(
+              (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+              (adn): ADN(
+                (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                (D): Dropout(p=0.1, inplace=False)
+                (A): PReLU(num_parameters=1)
+              )
+            )
+          )
+          (residual): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+        )
+        (1): SkipConnection(
+          (submodule): Sequential(
+            (0): ResidualUnit(
+              (conv): Sequential(
+                (unit0): Convolution(
+                  (conv): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                  (adn): ADN(
+                    (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                    (D): Dropout(p=0.1, inplace=False)
+                    (A): PReLU(num_parameters=1)
+                  )
+                )
+                (unit1): Convolution(
+                  (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                  (adn): ADN(
+                    (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                    (D): Dropout(p=0.1, inplace=False)
+                    (A): PReLU(num_parameters=1)
+                  )
+                )
+              )
+              (residual): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+            )
+            (1): SkipConnection(
+              (submodule): Sequential(
+                (0): ResidualUnit(
+                  (conv): Sequential(
+                    (unit0): Convolution(
+                      (conv): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                      (adn): ADN(
+                        (N): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                        (D): Dropout(p=0.1, inplace=False)
+                        (A): PReLU(num_parameters=1)
+                      )
+                    )
+                    (unit1): Convolution(
+                      (conv): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                      (adn): ADN(
+                        (N): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                        (D): Dropout(p=0.1, inplace=False)
+                        (A): PReLU(num_parameters=1)
+                      )
+                    )
+                  )
+                  (residual): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                )
+                (1): SkipConnection(
+                  (submodule): ResidualUnit(
+                    (conv): Sequential(
+                      (unit0): Convolution(
+                        (conv): Conv3d(256, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                      (unit1): Convolution(
+                        (conv): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                    )
+                    (residual): Conv3d(256, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+                  )
+                )
+                (2): Sequential(
+                  (0): Convolution(
+                    (conv): ConvTranspose3d(768, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+                    (adn): ADN(
+                      (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                      (D): Dropout(p=0.1, inplace=False)
+                      (A): PReLU(num_parameters=1)
+                    )
+                  )
+                  (1): ResidualUnit(
+                    (conv): Sequential(
+                      (unit0): Convolution(
+                        (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                    )
+                    (residual): Identity()
+                  )
+                )
+              )
+            )
+            (2): Sequential(
+              (0): Convolution(
+                (conv): ConvTranspose3d(256, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+                (adn): ADN(
+                  (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                  (D): Dropout(p=0.1, inplace=False)
+                  (A): PReLU(num_parameters=1)
+                )
+              )
+              (1): ResidualUnit(
+                (conv): Sequential(
+                  (unit0): Convolution(
+                    (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                    (adn): ADN(
+                      (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                      (D): Dropout(p=0.1, inplace=False)
+                      (A): PReLU(num_parameters=1)
+                    )
+                  )
+                )
+                (residual): Identity()
+              )
+            )
+          )
+        )
+        (2): Sequential(
+          (0): Convolution(
+            (conv): ConvTranspose3d(128, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+            (adn): ADN(
+              (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+              (D): Dropout(p=0.1, inplace=False)
+              (A): PReLU(num_parameters=1)
+            )
+          )
+          (1): ResidualUnit(
+            (conv): Sequential(
+              (unit0): Convolution(
+                (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                (adn): ADN(
+                  (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                  (D): Dropout(p=0.1, inplace=False)
+                  (A): PReLU(num_parameters=1)
+                )
+              )
+            )
+            (residual): Identity()
+          )
+        )
+      )
+    )
+    (2): Sequential(
+      (0): Convolution(
+        (conv): ConvTranspose3d(64, 6, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+        (adn): ADN(
+          (N): InstanceNorm3d(6, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+          (D): Dropout(p=0.1, inplace=False)
+          (A): PReLU(num_parameters=1)
+        )
+      )
+      (1): ResidualUnit(
+        (conv): Sequential(
+          (unit0): Convolution(
+            (conv): Conv3d(6, 6, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          )
+        )
+        (residual): Identity()
+      )
+    )
+  )
+)
+Training (1 / 50000 Steps) (loss=1.37791):   0%|                                                 | 0/19 [00:24<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validate (25 / 25 Steps): 100%|█████████████████████████████████████████████████████████| 25/25 [02:26<00:00,  6.11s/it]
+
+
+
+
+
+
+Training (7 / 50000 Steps) (loss=1.19451):  37%|███████████████                          | 7/19 [03:21<05:45, 28.81s/it]
+Traceback (most recent call last):
+  File "train.py", line 358, in <module>
+    main()
+  File "train.py", line 235, in main
+    global_step, dice_val_best, global_step_best = train(
+  File "train.py", line 299, in train
+    for step, batch in enumerate(epoch_iterator):
+  File "/opt/conda/lib/python3.8/site-packages/tqdm/std.py", line 1180, in __iter__
+    for obj in iterable:
+  File "/opt/conda/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "/opt/conda/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1192, in _next_data
+    return self._process_data(data)
+  File "/opt/conda/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1238, in _process_data
+    data.reraise()
+  File "/opt/conda/lib/python3.8/site-packages/torch/_utils.py", line 438, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 7.
+Original Traceback (most recent call last):
+  File "/opt/monai/monai/transforms/transform.py", line 89, in apply_transform
+    return _apply_transform(transform, data, unpack_items)
+  File "/opt/monai/monai/transforms/transform.py", line 53, in _apply_transform
+    return transform(parameters)
+  File "/opt/monai/monai/transforms/croppad/dictionary.py", line 1171, in __call__
+    self.randomize(label, fg_indices, bg_indices, image)
+  File "/opt/monai/monai/transforms/croppad/dictionary.py", line 1153, in randomize
+    self.centers = generate_pos_neg_label_crop_centers(
+  File "/opt/monai/monai/transforms/utils.py", line 512, in generate_pos_neg_label_crop_centers
+    centers.append(correct_crop_centers(center, spatial_size, label_spatial_shape, allow_smaller))
+  File "/opt/monai/monai/transforms/utils.py", line 439, in correct_crop_centers
+    raise ValueError("The size of the proposed random crop ROI is larger than the image size.")
+ValueError: The size of the proposed random crop ROI is larger than the image size.
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/opt/conda/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/conda/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/opt/monai/monai/data/dataset.py", line 97, in __getitem__
+    return self._transform(index)
+  File "/opt/monai/monai/data/dataset.py", line 807, in _transform
+    data = apply_transform(_transform, data)
+  File "/opt/monai/monai/transforms/transform.py", line 113, in apply_transform
+    raise RuntimeError(f"applying transform {transform}") from e
+RuntimeError: applying transform <monai.transforms.croppad.dictionary.RandCropByPosNegLabeld object at 0x7ff58646f670>

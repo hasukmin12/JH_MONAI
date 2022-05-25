@@ -1,0 +1,11 @@
+
+Train 75 Valid 25
+Traceback (most recent call last):
+  File "train.py", line 358, in <module>
+    main()
+  File "train.py", line 157, in main
+    from trains_multi_organ import call_transforms
+  File "/home/sukmin/JH_MONAI/trains_multi_organ.py", line 13
+    Add Spacing
+        ^
+SyntaxError: invalid syntax

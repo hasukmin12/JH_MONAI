@@ -1,0 +1,570 @@
+
+Train 75 Valid 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loading dataset: 100%|██████████████████████████████████████████████████████████████████| 75/75 [01:57<00:00,  1.57s/it]
+
+
+
+
+
+
+
+
+
+Loading dataset: 100%|██████████████████████████████████████████████████████████████████| 25/25 [00:40<00:00,  1.63s/it]
+UNet(
+  (model): Sequential(
+    (0): ResidualUnit(
+      (conv): Sequential(
+        (unit0): Convolution(
+          (conv): Conv3d(1, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+          (adn): ADN(
+            (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+            (D): Dropout(p=0.1, inplace=False)
+            (A): PReLU(num_parameters=1)
+          )
+        )
+        (unit1): Convolution(
+          (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (adn): ADN(
+            (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+            (D): Dropout(p=0.1, inplace=False)
+            (A): PReLU(num_parameters=1)
+          )
+        )
+      )
+      (residual): Conv3d(1, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+    )
+    (1): SkipConnection(
+      (submodule): Sequential(
+        (0): ResidualUnit(
+          (conv): Sequential(
+            (unit0): Convolution(
+              (conv): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+              (adn): ADN(
+                (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                (D): Dropout(p=0.1, inplace=False)
+                (A): PReLU(num_parameters=1)
+              )
+            )
+            (unit1): Convolution(
+              (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+              (adn): ADN(
+                (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                (D): Dropout(p=0.1, inplace=False)
+                (A): PReLU(num_parameters=1)
+              )
+            )
+          )
+          (residual): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+        )
+        (1): SkipConnection(
+          (submodule): Sequential(
+            (0): ResidualUnit(
+              (conv): Sequential(
+                (unit0): Convolution(
+                  (conv): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                  (adn): ADN(
+                    (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                    (D): Dropout(p=0.1, inplace=False)
+                    (A): PReLU(num_parameters=1)
+                  )
+                )
+                (unit1): Convolution(
+                  (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                  (adn): ADN(
+                    (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                    (D): Dropout(p=0.1, inplace=False)
+                    (A): PReLU(num_parameters=1)
+                  )
+                )
+              )
+              (residual): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+            )
+            (1): SkipConnection(
+              (submodule): Sequential(
+                (0): ResidualUnit(
+                  (conv): Sequential(
+                    (unit0): Convolution(
+                      (conv): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                      (adn): ADN(
+                        (N): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                        (D): Dropout(p=0.1, inplace=False)
+                        (A): PReLU(num_parameters=1)
+                      )
+                    )
+                    (unit1): Convolution(
+                      (conv): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                      (adn): ADN(
+                        (N): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                        (D): Dropout(p=0.1, inplace=False)
+                        (A): PReLU(num_parameters=1)
+                      )
+                    )
+                  )
+                  (residual): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+                )
+                (1): SkipConnection(
+                  (submodule): ResidualUnit(
+                    (conv): Sequential(
+                      (unit0): Convolution(
+                        (conv): Conv3d(256, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                      (unit1): Convolution(
+                        (conv): Conv3d(512, 512, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(512, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                    )
+                    (residual): Conv3d(256, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+                  )
+                )
+                (2): Sequential(
+                  (0): Convolution(
+                    (conv): ConvTranspose3d(768, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+                    (adn): ADN(
+                      (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                      (D): Dropout(p=0.1, inplace=False)
+                      (A): PReLU(num_parameters=1)
+                    )
+                  )
+                  (1): ResidualUnit(
+                    (conv): Sequential(
+                      (unit0): Convolution(
+                        (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                        (adn): ADN(
+                          (N): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                          (D): Dropout(p=0.1, inplace=False)
+                          (A): PReLU(num_parameters=1)
+                        )
+                      )
+                    )
+                    (residual): Identity()
+                  )
+                )
+              )
+            )
+            (2): Sequential(
+              (0): Convolution(
+                (conv): ConvTranspose3d(256, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+                (adn): ADN(
+                  (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                  (D): Dropout(p=0.1, inplace=False)
+                  (A): PReLU(num_parameters=1)
+                )
+              )
+              (1): ResidualUnit(
+                (conv): Sequential(
+                  (unit0): Convolution(
+                    (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                    (adn): ADN(
+                      (N): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                      (D): Dropout(p=0.1, inplace=False)
+                      (A): PReLU(num_parameters=1)
+                    )
+                  )
+                )
+                (residual): Identity()
+              )
+            )
+          )
+        )
+        (2): Sequential(
+          (0): Convolution(
+            (conv): ConvTranspose3d(128, 32, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+            (adn): ADN(
+              (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+              (D): Dropout(p=0.1, inplace=False)
+              (A): PReLU(num_parameters=1)
+            )
+          )
+          (1): ResidualUnit(
+            (conv): Sequential(
+              (unit0): Convolution(
+                (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+                (adn): ADN(
+                  (N): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+                  (D): Dropout(p=0.1, inplace=False)
+                  (A): PReLU(num_parameters=1)
+                )
+              )
+            )
+            (residual): Identity()
+          )
+        )
+      )
+    )
+    (2): Sequential(
+      (0): Convolution(
+        (conv): ConvTranspose3d(64, 6, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1), output_padding=(1, 1, 1))
+        (adn): ADN(
+          (N): InstanceNorm3d(6, eps=1e-05, momentum=0.1, affine=False, track_running_stats=False)
+          (D): Dropout(p=0.1, inplace=False)
+          (A): PReLU(num_parameters=1)
+        )
+      )
+      (1): ResidualUnit(
+        (conv): Sequential(
+          (unit0): Convolution(
+            (conv): Conv3d(6, 6, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          )
+        )
+        (residual): Identity()
+      )
+    )
+  )
+)
+image shape: torch.Size([1, 505, 504, 146]), label shape: torch.Size([6, 505, 504, 146])
+Training (1 / 50000 Steps) (loss=1.36709):   0%|                                                 | 0/19 [00:20<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validate (25 / 25 Steps): 100%|█████████████████████████████████████████████████████████| 25/25 [01:36<00:00,  3.93s/it]
+
+
+
+
+
+
+
+
+
+
+
+Training (19 / 50000 Steps) (loss=1.11610): 100%|███████████████████████████████████████| 19/19 [02:35<00:00,  8.17s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training (38 / 50000 Steps) (loss=1.08577): 100%|███████████████████████████████████████| 19/19 [01:01<00:00,  3.24s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (57 / 50000 Steps) (loss=1.06353): 100%|███████████████████████████████████████| 19/19 [00:54<00:00,  2.87s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training (76 / 50000 Steps) (loss=1.01832): 100%|███████████████████████████████████████| 19/19 [00:56<00:00,  2.97s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training (95 / 50000 Steps) (loss=0.98185): 100%|███████████████████████████████████████| 19/19 [00:44<00:00,  2.36s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (114 / 50000 Steps) (loss=0.97401): 100%|██████████████████████████████████████| 19/19 [00:48<00:00,  2.56s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (133 / 50000 Steps) (loss=1.00279): 100%|██████████████████████████████████████| 19/19 [00:51<00:00,  2.73s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (152 / 50000 Steps) (loss=0.98661): 100%|██████████████████████████████████████| 19/19 [00:55<00:00,  2.93s/it]
+
+
+
+
+
+
+
+
+
+
+
+Training (171 / 50000 Steps) (loss=0.98233): 100%|██████████████████████████████████████| 19/19 [00:52<00:00,  2.74s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (190 / 50000 Steps) (loss=0.96286): 100%|██████████████████████████████████████| 19/19 [00:50<00:00,  2.64s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (209 / 50000 Steps) (loss=0.97155): 100%|██████████████████████████████████████| 19/19 [00:50<00:00,  2.64s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (228 / 50000 Steps) (loss=0.94789): 100%|██████████████████████████████████████| 19/19 [00:58<00:00,  3.07s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (247 / 50000 Steps) (loss=0.95151): 100%|██████████████████████████████████████| 19/19 [00:51<00:00,  2.73s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (266 / 50000 Steps) (loss=0.97049): 100%|██████████████████████████████████████| 19/19 [00:47<00:00,  2.50s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training (285 / 50000 Steps) (loss=0.95938): 100%|██████████████████████████████████████| 19/19 [00:48<00:00,  2.53s/it]
+
+
+
+
+
+
+
+
+
+
+
+Training (304 / 50000 Steps) (loss=0.89439): 100%|██████████████████████████████████████| 19/19 [00:49<00:00,  2.61s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training (323 / 50000 Steps) (loss=0.93127): 100%|██████████████████████████████████████| 19/19 [00:56<00:00,  2.97s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Training (342 / 50000 Steps) (loss=0.92362): 100%|██████████████████████████████████████| 19/19 [01:00<00:00,  3.16s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (361 / 50000 Steps) (loss=0.92517): 100%|██████████████████████████████████████| 19/19 [00:53<00:00,  2.81s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+Training (380 / 50000 Steps) (loss=0.93734): 100%|██████████████████████████████████████| 19/19 [00:38<00:00,  2.03s/it]
+
+
+
+
+
+
+
+
+
+
+
+Training (399 / 50000 Steps) (loss=0.88259): 100%|██████████████████████████████████████| 19/19 [00:41<00:00,  2.17s/it]
